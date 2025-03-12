@@ -84,12 +84,12 @@ const ContactForm = () => {
               {
                 img: "/rgbph.png",
                 title: "Mail Us 24/7",
-                value: "ceosparkwave@gmail.com",
+                value: "testing@gmail.com",
               },
               {
                 img: "/rgbmail.png",
                 title: "For Urgent Help",
-                value: "+92 315 479 5801",
+                value: "+44 555 666 000",
               },
             ].map((contact, index) => (
               <Flex gap="25px" mt={index ? "24px" : "0px"} key={contact.title}>
@@ -144,7 +144,7 @@ const ContactForm = () => {
                 { name: "phoneNumber", label: "Phone Number", type: "tel" },
                 { name: "email", label: "Email Address", type: "email" },
               ].map((field) => (
-                <Flex direction="column" flex="1" key={field.name} ml={{ md: 4 }}>
+                <Flex direction="column" flex="1" key={field.name} >
                   <FormControl>
                     <FormLabel fontSize="16px" fontWeight="400" lineHeight="30px" color="white">
                       {field.label}

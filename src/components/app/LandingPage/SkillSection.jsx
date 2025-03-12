@@ -25,7 +25,7 @@ const SkillsSection = () => {
             bg={skill.highlight ? "purple.600" : "#17132b"}
             p={6}
             borderRadius="lg"
-            w={'300px'}
+            w={'235px'}
             h="200px"
             justify="center"
             align="center"
