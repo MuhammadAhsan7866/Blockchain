@@ -15,13 +15,13 @@ const LandingPage = () => {
         <HeroSection />
          <AboutSection/>
          <PortfolioServices/>
-         <Container maxW={'1320px'} py={'100px'}>
+         {/* <Container maxW={'1320px'} py={'100px'}>
           <Heading mb={'45px'} color="purple.400" textAlign={'center'}>
           Featured Projects
 
           </Heading>
          <FeatureProjects/>
-         </Container>
+         </Container> */}
           <SkillsSection/>
           <TestimonialSlider/>
           
