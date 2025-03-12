@@ -118,7 +118,7 @@ const ContactForm = () => {
           p="30px"
         >
           <form onSubmit={handleSubmit}>
-            <Flex  direction={{ base: "column", md: "row" }} justify="space-between" gap='12px'>
+            <Flex  direction={{ base: "column", md: "row" }} gap='12px'  >
               {[
                 { name: "firstName", label: "First Name" },
                 { name: "lastName", label: "Last Name" },
@@ -139,7 +139,7 @@ const ContactForm = () => {
                 </Flex>
               ))}
             </Flex>
-            <Flex direction={{ base: "column", md: "row" }} justify="space-between" mt={4} gap='12px'>
+            <Flex direction={{ base: "column", md: "row" }} gap='12px' mt={4}>
               {[
                 { name: "phoneNumber", label: "Phone Number", type: "tel" },
                 { name: "email", label: "Email Address", type: "email" },

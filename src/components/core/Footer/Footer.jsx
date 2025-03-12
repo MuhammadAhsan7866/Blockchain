@@ -129,7 +129,7 @@ export default function LargeWithAppLinksAndSocial() {
           justify={'center'}
           align={'center'}
         >
-          <Text color={'#7B7A7A'}>Copyright © 2024 Braintree. All rights reserved</Text>
+          <Text color={'#7B7A7A'}>Copyright © 2025 Blockchain. All rights reserved</Text>
         </Container>
       </Box>
     </Box>
