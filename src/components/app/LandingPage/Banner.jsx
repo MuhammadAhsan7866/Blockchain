@@ -56,7 +56,7 @@ export default function HeroSection() {
           >
             <Flex flexDir="column" p="1em" gap="20px">
               <Text color="#FF1415" fontSize="35px" fontWeight="700">
-                Im Dario Melappioni
+                I am Dario Melappioni
               </Text>
               <Heading
                 as="h2"
