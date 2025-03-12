@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Box maxW={"100%"} w="100%" mx="auto" position={"relative"}>
         <HeroSection />
          <AboutSection/>
-         <PortfolioServices/>
+         {/* <PortfolioServices/>
          <Container maxW={'1320px'} py={'100px'}>
           <Heading mb={'45px'} color="purple.400" textAlign={'center'}>
           Featured Projects
@@ -25,7 +25,7 @@ const LandingPage = () => {
           <SkillsSection/>
           <TestimonialSlider/>
           
-          <ContactForm/>
+          <ContactForm/> */}
       </Box>
     </>
   );
