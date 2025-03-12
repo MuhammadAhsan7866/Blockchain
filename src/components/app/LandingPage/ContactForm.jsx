@@ -118,12 +118,12 @@ const ContactForm = () => {
           p="30px"
         >
           <form onSubmit={handleSubmit}>
-            <Flex  direction={{ base: "column", md: "row" }} justify="space-between">
+            <Flex  direction={{ base: "column", md: "row" }} justify="space-between" gap='12px'>
               {[
                 { name: "firstName", label: "First Name" },
                 { name: "lastName", label: "Last Name" },
               ].map((field) => (
-                <Flex gap='12px' direction="column" flex="1" key={field.name}  >
+                <Flex  direction="column" flex="1" key={field.name}  >
                   <FormControl>
                     <FormLabel fontSize="16px" fontWeight="400" lineHeight="30px" color="white">
                       {field.label}
@@ -139,7 +139,7 @@ const ContactForm = () => {
                 </Flex>
               ))}
             </Flex>
-            <Flex direction={{ base: "column", md: "row" }} justify="space-between" mt={4}>
+            <Flex direction={{ base: "column", md: "row" }} justify="space-between" mt={4} gap='12px'>
               {[
                 { name: "phoneNumber", label: "Phone Number", type: "tel" },
                 { name: "email", label: "Email Address", type: "email" },
