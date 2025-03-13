@@ -95,9 +95,11 @@ const HoverCard = ({ project }) => {
             p={{ base: "18px", md: "20px" }}
             bgGradient="linear(to-r, #2a1454, #8750f7)"
             color="white"
-            borderRadius={{ base: '12px', md: '20px' }}
+            borderRadius={{ base: "12px", md: "20px" }}
           >
-            <Text fontSize="xl" fontWeight="bold">{project.title}</Text>
+            <Text fontSize="xl" fontWeight="bold">
+              {project.title}
+            </Text>
             <Text fontSize={{ base: "14px", md: "20px" }} mt={2}>
               {project.description}
             </Text>
@@ -116,9 +118,17 @@ const HoverCard = ({ project }) => {
           <ModalCloseButton />
           <ModalBody>
             <Image src={project.image} alt={project.title} w="full" mb={4} />
-            <Grid templateColumns="repeat(auto-fill, minmax(100px, 1fr))" gap={3}>
+            <Grid
+              templateColumns="repeat(auto-fill, minmax(100px, 1fr))"
+              gap={3}
+            >
               {project.screenshots.map((screenshot, idx) => (
-                <Image key={idx} src={screenshot} alt={`Screenshot ${idx}`} borderRadius="md" />
+                <Image
+                  key={idx}
+                  src={screenshot}
+                  alt={`Screenshot ${idx}`}
+                  borderRadius="md"
+                />
               ))}
             </Grid>
           </ModalBody>
