@@ -1,85 +1,270 @@
-'use client';
+import { useState, useEffect } from "react";
+import {
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Button,
+  useDisclosure,
+  Stack,
+  ButtonGroup,
+  Img,
+  Drawer,
+  DrawerBody,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Text,
+  Heading,
+} from "@chakra-ui/react";
+import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
-import { useState, useEffect } from 'react';
-import { Box, Flex, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, VStack, Link, useDisclosure } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import NextLink from 'next/link';
-
-const Header = () => {
-  const [scrolling, setScrolling] = useState(false);
+export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [headerStyles, setHeaderStyles] = useState({
+    backgroundColor: "#121225",
+    backdropFilter: "blur(10px)",
+  });
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setHeaderStyles({
+        backgroundColor: "#121225",
+        backdropFilter: "blur(10px)",
+      });
+    } else {
+      setHeaderStyles({
+        backgroundColor: "#121225",
+        backdropFilter: "blur(10px)",
+      });
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <Box
-      position="fixed"
-      top={0}
-      left={0}
-      right={0}
-      zIndex={1000}
-      transition="background-color 0.3s"
-      bg={scrolling ? 'rgba(0, 0, 0, 0.8)' : 'transparent'}
-      boxShadow={scrolling ? 'md' : 'none'}
+      sx={{
+        ...headerStyles,
+        // position: "fixed",
+        width: "100%",
+        opacity: 1,
+        zIndex: 10,
+      }}
+      px={4}
     >
-      <Flex justify="space-between" align="center" p={4} maxW="1200px" mx="auto">
-        <NextLink href="/" passHref>
-          <Link fontSize="xl" fontWeight="bold" color="white">Logo</Link>
-        </NextLink>
+      <Flex
+        h={"95px"}
+        alignItems="center"
+        justifyContent="space-between"
+        maxW={"1340px"}
+        m={"auto"}
+        p={"12px"}
+      >
+        <Box w={{ base: "100%", md: "25%" }}>
+          <Link href="http://localhost:3000/">
+            {/* <Img src="/Gatech.co-Logo.png" w={"70%"} /> */}
+            <Heading fontSize={'32px'} color={'white'}>
+           Portfolio
+          </Heading>
+          </Link>
+        </Box>
 
-        {/* Mobile Menu Button */}
-        <IconButton
-          display={{ base: 'block', md: 'none' }}
-          icon={<HamburgerIcon />}
-          variant="outline"
-          color="white"
-          onClick={onOpen}
-        />
+        <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
+          <HStack
+            as="nav"
+            spacing={4}
+            display={{
+              base: "none",
+              md: "none",
+              lg: "block",
+              xxl: "block",
+              xxxl: "block",
+            }}
+          >
+            <Menu>
+            <Link href="#about" scroll={false}>
+            <MenuButton
+                as={Button}
+                color="white"
+                bg={"transparent"}
+                _hover={{ color: "gray.400" }}
+                _focus={{ boxShadow: "none", bg: "transparent" }}
+                _active={{ bg: "transparent" }}
+                fontWeight={"normal"}
+              >
+                About
+              </MenuButton>
+            </Link>
+              
+            </Menu>
 
-        {/* Desktop Navigation */}
-        <Flex display={{ base: 'none', md: 'flex' }} gap={6}>
-          <NextLink href="/#about" passHref>
-            <Link color="white">About</Link>
-          </NextLink>
-          <NextLink href="/#services" passHref>
-            <Link color="white">Services</Link>
-          </NextLink>
-          <NextLink href="/#contact" passHref>
-            <Link color="white">Contact</Link>
-          </NextLink>
+            <Link href="/SuccessStory">
+              <Button
+                color="white"
+                bg={"transparent"}
+                colorScheme="transparent"
+                aria-label="Contact Us"
+                _hover={{ color: "gray.400" }}
+              >
+                Projects
+              </Button>
+            </Link>
+            <Link href="/Career">
+              <Button
+                color="white"
+                bg={"transparent"}
+                colorScheme="transparent"
+                aria-label="Contact Us"
+                _hover={{ color: "gray.400" }}
+              >
+                Contact
+              </Button>
+            </Link>
+          </HStack>
         </Flex>
+
+        <Flex
+          alignItems="center"
+          justifyContent={"center"}
+          display={{
+            base: "none",
+            md: "none",
+            lg: "block",
+            xxl: "block",
+            xxxl: "block",
+          }}
+        >
+          <Button
+            sx={{
+              background: "linear-gradient(140deg, #FF6E00, #A629F2)",
+              color: "white",
+              border: "none",
+              padding: "15px 30px",
+              borderRadius: "150px",
+              cursor: "pointer",
+              height: "52px",
+              boxShadow:
+                "0px 8px 18px -3px rgba(153.99999999999997, 0.9999999999999964, 255, 0.32)",
+              transition: "background 0.3s ease",
+              _hover: {
+                background: "linear-gradient(260deg, #FF4094, #A629F2)",
+              },
+            }}
+          >
+            Get Started
+          </Button>
+          ;
+        </Flex>
+
+        <IconButton
+          size="md"
+          icon={<HamburgerIcon color="white" />}
+          aria-label="Open Menu"
+          display={{
+            base: "block",
+            md: "block",
+            lg: "none",
+            xxl: "none",
+            xxxl: "none",
+          }}
+          onClick={onOpen}
+          sx={{
+            background: "linear-gradient(140deg, #FF6E00, #A629F2)",
+            color: "white",
+            transition: "background 0.3s ease",
+          }}
+        />
       </Flex>
 
-      {/* Mobile Drawer */}
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent bg="gray.900" color="white" w="full">
+        <DrawerContent bg="black">
           <DrawerCloseButton />
-          <VStack mt={12} spacing={6} align="center">
-            <NextLink href="/#about" passHref>
-              <Link onClick={onClose}>About</Link>
-            </NextLink>
-            <NextLink href="/#services" passHref>
-              <Link onClick={onClose}>Services</Link>
-            </NextLink>
-            <NextLink href="/#contact" passHref>
-              <Link onClick={onClose}>Contact</Link>
-            </NextLink>
-          </VStack>
+          <DrawerHeader></DrawerHeader>
+          <DrawerBody>
+            <Stack as="nav" spacing={4}>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  rightIcon={<ChevronDownIcon />}
+                  w="100%"
+                  bg="transparent"
+                  _hover={{ color: "gray.400" }}
+                  _focus={{ boxShadow: "none", bg: "transparent" }}
+                  _active={{ bg: "transparent" }}
+                  onMouseEnter={onOpen}
+                  onMouseLeave={onClose}
+                >
+                  About
+                </MenuButton>
+                <MenuList>
+                  <MenuItem as={Link} href="/OurVision">
+                    Our Vision
+                  </MenuItem>
+                  <MenuItem as={Link} href="/SupportMarriage">
+                    Support a Marriage
+                  </MenuItem>
+                  <MenuItem as={Link} href="/BankAccount">
+                    Safety and Security
+                  </MenuItem>
+                  <MenuItem as={Link} href="/BrideGuide">
+                    Bride Guide
+                  </MenuItem>
+                  <MenuItem as={Link} href="/GroomGuide">
+                    Groom Guide
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+
+              <Link href="/Cards">
+                <Button
+                  bg="transparent"
+                  colorScheme="transparent"
+                  w="100%"
+                  textAlign="left"
+                  _hover={{ color: "gray.400" }}
+                >
+                  Plans
+                </Button>
+              </Link>
+              <Link href="/#">
+                <Button
+                  bg="transparent"
+                  colorScheme="transparent"
+                  w="100%"
+                  textAlign="left"
+                  _hover={{ color: "gray.400" }}
+                >
+                  Events
+                </Button>
+              </Link>
+              <Link href="/SuccessStory">
+                <Button
+                  bg="transparent"
+                  colorScheme="transparent"
+                  w="100%"
+                  textAlign="left"
+                  _hover={{ color: "gray.400" }}
+                >
+                  Success Story
+                </Button>
+              </Link>
+            </Stack>
+          </DrawerBody>
         </DrawerContent>
       </Drawer>
     </Box>
   );
-};
-
-export default Header;
+}
