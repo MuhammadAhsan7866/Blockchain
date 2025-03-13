@@ -49,17 +49,17 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <Container maxW={"1340px"} py={'100px'}>
+    <Container maxW={"1340px"} py={{base:'40px',md:'100px'}}>
       <Flex
         color="white"
         align="center"
         justify="space-between"
-        flexDirection={{ base: "column", md: "row" }}
+        flexDirection={{ base: 'column', md: "row" }}
       >
         {/* Left Side Text */}
-        <VStack align="flex-start" maxW="40%" spacing={4}>
+        <VStack align="flex-start" maxW={{base:'100%',md:'40%'}} spacing={4} mb={{base:'45px',md:'0'}} >
           <Text
-            fontSize={{ xl: "48px", lg: "42px", base: "38px", md: "42px" }}
+            fontSize={{ xl: "28px", lg: "42px", base: "38px", md: "42px" }}
             lineHeight={{ xl: "54px", base: "36px", md: "53px" }}
             fontWeight={"900"}
             letterSpacing={"-2%"}
@@ -67,7 +67,7 @@ const TestimonialSlider = () => {
           >
             What My Customers <br /> Says About Me
           </Text>
-          <Text opacity={0.7} fontSize={"22px"} fontStyle="italic">
+          <Text opacity={0.7} fontSize={{base:'17px',md:'20px'}} fontStyle="italic">
             Consectetur. Fusce nunc sit ac sapien mauris vitae. Tortor cras nisl
             molestie malesuada mauris. Quam at sed cras enim adipiscing molestie
             odio.
@@ -96,7 +96,7 @@ const TestimonialSlider = () => {
                 background: "linear-gradient(260deg, #FF4094, #A629F2)",
               },
             }}
-            w={"45%"}
+            w={{base:'100%',md:'45%'}}
             mt={'25px'}
           >
            See All Testimonials
@@ -105,7 +105,7 @@ const TestimonialSlider = () => {
 
         {/* Right Side Testimonial Slider */}
         <Box
-          maxW="50%"
+          maxW={{base:'100%',md:'50%'}}
           p={"30px 30px 10px 30px"}
           borderRadius="20px"
           bgGradient={
@@ -119,7 +119,7 @@ const TestimonialSlider = () => {
                 <Flex align="center" mb={4}>
                   <Image
                     borderRadius="full"
-                    w={"110px"}
+                    w={{base:'65px',md:'110px'}}
                     h={"auto"}
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -128,15 +128,15 @@ const TestimonialSlider = () => {
                     p={"5px"}
                   />
                   <VStack align="flex-start">
-                    <Text fontSize="40px" fontWeight="bold">
+                    <Text fontSize={{base:'17px',md:'40px'}} fontWeight="bold">
                       {testimonial.name}
                     </Text>
-                    <Text fontSize="20px" opacity={0.7}>
+                    <Text fontSize={{base:'14px',md:'20px'}} opacity={0.7}>
                       {testimonial.role}
                     </Text>
                   </VStack>
                 </Flex>
-                <Text fontSize={"22px"} fontStyle="italic">
+                <Text fontSize={{base:'17px',md:'22px'}} fontStyle="italic">
                   {testimonial.quote}
                 </Text>
               </Box>

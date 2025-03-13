@@ -49,7 +49,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Container maxW={"1340px"} py={"70px"}>
+    <Container maxW={"1340px"} py={{base:'40px',md:'70px'}} px={{base:'25px',md:'20px'}}>
       <Flex
         flexDirection={{ base: "column", lg: "row" }}
         gap={{ base: "30px", lg: "40px" }}

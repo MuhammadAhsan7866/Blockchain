@@ -33,30 +33,30 @@ const CountersClients = () => {
 
   return (
     <HStack
-    spacing={8}
-    pt={4}
-    wrap="wrap"
-    justify={{ base: "center", md: "start" }}
-  >
-    <VStack>
-      <Text fontSize="50px" fontWeight="bold" color="yellow.300">
-        {customers}+
-      </Text>
-      <Text color="gray.200">SATISFIED CUSTOMERS</Text>
-    </VStack>
-    <VStack>
-      <Text fontSize="50px" fontWeight="bold" color="yellow.300">
-        {projects}+
-      </Text>
-      <Text color="gray.200">SUCCESSFUL PROJECTS</Text>
-    </VStack>
-    <VStack>
-      <Text fontSize="50px" fontWeight="bold" color="yellow.300">
-        {years}+
-      </Text>
-      <Text color="gray.200">YEARS EXPERIENCE</Text>
-    </VStack>
-  </HStack>
+      spacing={8}
+      pt={4}
+      mb={{base:'45px',md:'auto'}}
+      justify={{ base: "center", md: "start" }}
+    >
+      <VStack>
+        <Text fontSize={{base:'30px',md:'50px'}} fontWeight="bold" color="yellow.300">
+          {customers}+
+        </Text>
+        <Text color="gray.200" fontSize={{base:'14px',md:'18px'}}>SATISFIED CUSTOMERS</Text>
+      </VStack>
+      <VStack>
+        <Text fontSize={{base:'30px',md:'50px'}} fontWeight="bold" color="yellow.300">
+          {projects}+
+        </Text>
+        <Text color="gray.200" fontSize={{base:'14px',md:'18px'}}>SUCCESSFUL PROJECTS</Text>
+      </VStack>
+      <VStack>
+        <Text fontSize={{base:'30px',md:'50px'}} fontWeight="bold" color="yellow.300">
+          {years}+
+        </Text>
+        <Text color="gray.200" fontSize={{base:'14px',md:'18px'}}>YEARS EXPERIENCE</Text>
+      </VStack>
+    </HStack>
   );
 };
 

@@ -7,6 +7,7 @@ import FeatureProjects from "./FeatureProject";
 import SkillsSection from "./SkillSection";
 import TestimonialSlider from "./Testimonial";
 import ContactForm from "./ContactForm";
+import CompanyLogoSlider from "./Companylogo";
 
 const LandingPage = () => {
   return (
@@ -15,16 +16,16 @@ const LandingPage = () => {
         <HeroSection />
          <AboutSection/>
          <PortfolioServices/>
-         {/* <Container maxW={'1320px'} py={'100px'}>
+         <Container maxW={'1320px'} py={'100px'}>
           <Heading mb={'45px'} color="purple.400" textAlign={'center'}>
           Featured Projects
 
           </Heading>
          <FeatureProjects/>
-         </Container> */}
+         </Container>
           <SkillsSection/>
           <TestimonialSlider/>
-          
+          <CompanyLogoSlider/>
           <ContactForm/>
       </Box>
     </>

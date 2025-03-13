@@ -20,10 +20,13 @@ export default function HeroSection() {
     <Box
       position="relative"
       display="flex"
+     
       alignItems="center"
-      justifyContent="space-between"
-      bgPosition={{ base: "-535px 146px", md: "center" }}
+      justifyContent="center"
+      bgPosition={{ base: "center", md: "center" }}
       color="white"
+      px={{ base: 4, md: 8 }}
+      py={{ base:'35px', md: '0' }}
     >
       {/* Overlay */}
       <Box
@@ -34,34 +37,29 @@ export default function HeroSection() {
         transition="background 0.3s, border-radius 0.3s, opacity 0.3s"
       />
 
-      <Container
-        maxW="1340px"
-        p={0}
-        minH="85vh"
-        display="flex"
-        alignItems="center"
-        justifyContent="flex-start"
-        ml="auto"
-        mr="auto"
-        pos="relative"
-        flexGrow={1}
-      >
-        <Flex alignItems="center" width="100%">
+      <Container maxW="1340px" minH="85vh" display="flex" alignItems="center" pos="relative">
+        <Flex 
+          direction={{ base: "column", md: "row" }} 
+          alignItems="center" 
+          justifyContent="space-between" 
+          width="100%"
+          gap={{base:'45px',md:'25px'}}
+        >
           {/* Animated Text Content (Fade Left) */}
           <MotionBox
-            width={{ xl: "50%", lg: "50%", base: "100%" }}
+            width={{ md: "50%", base: "100%" }}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Flex flexDir="column" p="1em" gap="20px">
-              <Text color="#FF1415" fontSize="35px" fontWeight="700">
+            <Flex flexDir="column" p={{ base: "0", md: "2em" }} gap="20px">
+              <Text color="#FF1415" fontSize={{ base: "28px", md: "35px" }} fontWeight="700">
                 I am Dario Melappioni
               </Text>
               <Heading
                 as="h2"
-                fontSize={{ xl: "64px", lg: "42px", base: "42px" }}
-                lineHeight={{ xl: "75px", base: "36px" }}
+                fontSize={{ base: "32px", md: "42px", lg: "64px" }}
+                lineHeight={{ base: "40px", md: "50px", lg: "75px" }}
                 fontWeight="900"
                 letterSpacing="-2%"
                 color="white"
@@ -69,13 +67,12 @@ export default function HeroSection() {
                 NFT BlockChain + Developer
               </Heading>
               <Text
-                fontSize={{ xl: "17px", lg: "17px", base: "14px" }}
-                lineHeight={{ xl: "30px", base: "26px" }}
+                fontSize={{ base: "14px", md: "16px", lg: "17px" }}
+                lineHeight={{ base: "22px", md: "26px", lg: "30px" }}
                 fontWeight="500"
                 color="#DADADA"
               >
-                I break down complex user experience problems to create
-                integrity-focused solutions that connect billions of people.
+                I break down complex user experience problems to create integrity-focused solutions that connect billions of people.
                 Let’s Build Something Extraordinary.
               </Text>
               <Button
@@ -91,7 +88,7 @@ export default function HeroSection() {
                     background: "linear-gradient(260deg, #FF4094, #A629F2)",
                   },
                 }}
-                w="35%"
+                w={{ base: "100%", sm: "60%", md: "40%" }}
               >
                 Consultation Booking
               </Button>
@@ -99,12 +96,9 @@ export default function HeroSection() {
           </MotionBox>
 
           {/* Animated Image (Zoom In) */}
-          <Flex
-            justifyContent="end"
-            width={{ xl: "50%", lg: "50%", base: "100%" }}
-          >
+          <Flex justifyContent="center" width={{ md: "50%", base: "100%" }}>
             <MotionImg
-              w="85%"
+              w={{ base: "100%", sm: "85%", md: "85%" }}
               src="Hero-1.png"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
