@@ -56,11 +56,23 @@ export default function Header() {
   ];
 
   return (
-    <Box sx={{ ...headerStyles, position: "fixed", width: "100%", zIndex: 10 }} px={4}>
-      <Flex h={"95px"} alignItems="center" justifyContent="space-between" maxW={"1340px"} m={"auto"} p={"12px"}>
+    <Box
+      sx={{ ...headerStyles, position: "fixed", width: "100%", zIndex: 10 }}
+      px={4}
+    >
+      <Flex
+        h={"95px"}
+        alignItems="center"
+        justifyContent="space-between"
+        maxW={"1340px"}
+        m={"auto"}
+        p={"12px"}
+      >
         <Box w={{ base: "100%", md: "25%" }}>
           <Link to="banner" smooth={true} duration={500}>
-            <Heading fontSize={"32px"} color={"white"} cursor={"pointer"}>Portfolio</Heading>
+            <Heading fontSize={"32px"} color={"white"} cursor={"pointer"}>
+              Portfolio
+            </Heading>
           </Link>
         </Box>
 
@@ -68,7 +80,13 @@ export default function Header() {
           <HStack as="nav" spacing={4}>
             {navItems.map((item) => (
               <Link key={item.to} to={item.to} smooth={true} duration={500}>
-                <Button color="white" bg={"transparent"} _hover={{ color: "gray.400" }}>{item.label}</Button>
+                <Button
+                  color="white"
+                  bg={"transparent"}
+                  _hover={{ color: "gray.400" }}
+                >
+                  {item.label}
+                </Button>
               </Link>
             ))}
             <Link to="contact" smooth={true} duration={500}>
@@ -98,7 +116,10 @@ export default function Header() {
           aria-label="Open Menu"
           display={{ base: "block", md: "none" }}
           onClick={onOpen}
-          sx={{ background: "linear-gradient(140deg, #FF6E00, #A629F2)", color: "white" }}
+          sx={{
+            background: "linear-gradient(140deg, #FF6E00, #A629F2)",
+            color: "white",
+          }}
         />
       </Flex>
 
@@ -110,7 +131,14 @@ export default function Header() {
             <Stack as="nav" spacing={4} alignItems="center" py={6}>
               {navItems.map((item) => (
                 <Link key={item.to} to={item.to} smooth={true} duration={500}>
-                  <Button color="white" bg={"transparent"} _hover={{ color: "gray.400" }} fontSize="lg">{item.label}</Button>
+                  <Button
+                    color="white"
+                    bg={"transparent"}
+                    _hover={{ color: "gray.400" }}
+                    fontSize="lg"
+                  >
+                    {item.label}
+                  </Button>
                 </Link>
               ))}
               <Link to="contact" smooth={true} duration={500}>
@@ -128,7 +156,7 @@ export default function Header() {
                     },
                   }}
                 >
-                 Let's Talk
+                  Let&apos;s Talk
                 </Button>
               </Link>
             </Stack>

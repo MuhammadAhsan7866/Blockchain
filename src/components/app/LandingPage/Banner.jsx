@@ -27,7 +27,8 @@ export default function HeroSection() {
       bgPosition={{ base: "center", md: "center" }}
       color="white"
       px={{ base: 4, md: 8 }}
-      pt={{ base:'35px', md: '100px' }}
+      pt={{ base:'100px', md: '100px' }}
+     
     >
       {/* Overlay */}
       <Box
