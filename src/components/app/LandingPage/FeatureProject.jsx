@@ -113,7 +113,7 @@ const HoverCard = ({ project }) => {
       {/* Modal */}
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW='650px'>
           <ModalHeader>{project.title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
