@@ -12,7 +12,7 @@ const skills = [
 
 const SkillsSection = () => {
   return (
-    <Container maxW={"1340px"}>
+    <Container maxW={"1340px"} id="skills">
       <Box textAlign="center" color="white" py={12}>
         <Text fontSize="48px" fontWeight="bold" color="purple.400">
           My Skills
@@ -37,13 +37,14 @@ const SkillsSection = () => {
               _hover={{
                 bg: "#2a1454",
                 borderColor: "#8750f7",
+                color:'white'
               }}
             >
-              <Image src={skill.icon} alt={skill.name} boxSize="60px" opacity={0.6} transition="opacity 0.3s ease" />
-              <Text fontSize="18px" color="purple.400" opacity={0.7} transition="opacity 0.3s ease">
+              <Image src={skill.icon} alt={skill.name} boxSize="60px"  transition="opacity 0.3s ease" />
+              <Text fontSize="18px" color="purple.400"  transition="opacity 0.3s ease">
                 {skill.name}
               </Text>
-              <Text fontSize="14px" fontWeight="400" opacity={0.7} transition="opacity 0.3s ease">
+              <Text fontSize="14px" fontWeight="400"  transition="opacity 0.3s ease">
                 {skill.percentage}
               </Text>
             </VStack>

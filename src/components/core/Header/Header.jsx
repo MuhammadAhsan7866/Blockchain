@@ -23,8 +23,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import Link from "next/link";
-
+import { Link } from "react-scroll";
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [headerStyles, setHeaderStyles] = useState({
@@ -35,8 +34,9 @@ export default function Header() {
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setHeaderStyles({
-        backgroundColor: "#121225",
+        backgroundColor: "#050709",
         backdropFilter: "blur(10px)",
+        boxShadow: "0 0 30px rgba(135, 80, 247, 0.2)",
       });
     } else {
       setHeaderStyles({
@@ -52,36 +52,12 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const scrollToSection = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      const top = aboutSection.getBoundingClientRect().top + window.scrollY;
-      const duration = 4000; // Adjust time in milliseconds (1500ms = 1.5s)
-  
-      let startTime = null;
-      
-      const scrollStep = (timestamp) => {
-        if (!startTime) startTime = timestamp;
-        const progress = timestamp - startTime;
-        const easeInOutCubic = progress / duration < 0.5 
-          ? 4 * (progress / duration) ** 3 
-          : 1 - Math.pow(-2 * (progress / duration) + 2, 3) / 2;
-  
-        window.scrollTo(0, window.scrollY + (top - window.scrollY) * easeInOutCubic);
-  
-        if (progress < duration) {
-          requestAnimationFrame(scrollStep);
-        }
-      };
-  
-      requestAnimationFrame(scrollStep);
-    }
-  };
+
   return (
     <Box
       sx={{
         ...headerStyles,
-        // position: "fixed",
+        position: "fixed",
         width: "100%",
         opacity: 1,
         zIndex: 10,
@@ -97,11 +73,11 @@ export default function Header() {
         p={"12px"}
       >
         <Box w={{ base: "100%", md: "25%" }}>
-          <Link href="http://localhost:3000/">
+        <Link to="banner" smooth={true} duration={500}>
             {/* <Img src="/Gatech.co-Logo.png" w={"70%"} /> */}
-            <Heading fontSize={'32px'} color={'white'}>
-           Portfolio
-          </Heading>
+            <Heading fontSize={"32px"} color={"white"} cursor={'pointer'}>
+              Portfolio
+            </Heading>
           </Link>
         </Box>
 
@@ -118,24 +94,33 @@ export default function Header() {
             }}
           >
             <Menu>
-            <Link href="#about" scroll={false}>
-            <MenuButton
-                as={Button}
-                color="white"
-                bg={"transparent"}
-                _hover={{ color: "gray.400" }}
-                _focus={{ boxShadow: "none", bg: "transparent" }}
-                _active={{ bg: "transparent" }}
-                fontWeight={"normal"}
-                onClick={scrollToSection}
-              >
-                About
-              </MenuButton>
-            </Link>
-              
+              <Link to="about" smooth={true} duration={500}>
+                <MenuButton
+                  as={Button}
+                  color="white"
+                  bg={"transparent"}
+                  _hover={{ color: "gray.400" }}
+                  _focus={{ boxShadow: "none", bg: "transparent" }}
+                  _active={{ bg: "transparent" }}
+                  fontWeight={"normal"}
+                >
+                  About
+                </MenuButton>
+              </Link>
             </Menu>
 
-            <Link href="/SuccessStory">
+            <Link to="services" smooth={true} duration={500}>
+              <Button
+                color="white"
+                bg={"transparent"}
+                colorScheme="transparent"
+                aria-label="Contact Us"
+                _hover={{ color: "gray.400" }}
+              >
+                Services
+              </Button>
+            </Link>
+            <Link to="project" smooth={true} duration={500}>
               <Button
                 color="white"
                 bg={"transparent"}
@@ -146,7 +131,29 @@ export default function Header() {
                 Projects
               </Button>
             </Link>
-            <Link href="/Career">
+            <Link to="skills" smooth={true} duration={500}>
+              <Button
+                color="white"
+                bg={"transparent"}
+                colorScheme="transparent"
+                aria-label="Contact Us"
+                _hover={{ color: "gray.400" }}
+              >
+                My Skills
+              </Button>
+            </Link>
+            <Link to="testimonials" smooth={true} duration={500}>
+              <Button
+                color="white"
+                bg={"transparent"}
+                colorScheme="transparent"
+                aria-label="Contact Us"
+                _hover={{ color: "gray.400" }}
+              >
+                Testimonials
+              </Button>
+            </Link>
+            <Link to="contact" smooth={true} duration={500}>
               <Button
                 color="white"
                 bg={"transparent"}
@@ -171,26 +178,27 @@ export default function Header() {
             xxxl: "block",
           }}
         >
-          <Button
-            sx={{
-              background: "linear-gradient(140deg, #FF6E00, #A629F2)",
-              color: "white",
-              border: "none",
-              padding: "15px 30px",
-              borderRadius: "150px",
-              cursor: "pointer",
-              height: "52px",
-              boxShadow:
-                "0px 8px 18px -3px rgba(153.99999999999997, 0.9999999999999964, 255, 0.32)",
-              transition: "background 0.3s ease",
-              _hover: {
-                background: "linear-gradient(260deg, #FF4094, #A629F2)",
-              },
-            }}
-          >
-            Get Started
-          </Button>
-          ;
+          <Link to="contact" smooth={true} duration={500}>
+            <Button
+              sx={{
+                background: "linear-gradient(140deg, #FF6E00, #A629F2)",
+                color: "white",
+                border: "none",
+                padding: "15px 30px",
+                borderRadius: "150px",
+                cursor: "pointer",
+                height: "52px",
+                boxShadow:
+                  "0px 8px 18px -3px rgba(153.99999999999997, 0.9999999999999964, 255, 0.32)",
+                transition: "background 0.3s ease",
+                _hover: {
+                  background: "linear-gradient(260deg, #FF4094, #A629F2)",
+                },
+              }}
+            >
+              Get Started
+            </Button>
+          </Link>
         </Flex>
 
         <IconButton

@@ -11,6 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const MotionBox = motion(Box);
 const MotionImg = motion(Img);
@@ -20,13 +21,13 @@ export default function HeroSection() {
     <Box
       position="relative"
       display="flex"
-     
+     id="banner"
       alignItems="center"
       justifyContent="center"
       bgPosition={{ base: "center", md: "center" }}
       color="white"
       px={{ base: 4, md: 8 }}
-      py={{ base:'35px', md: '1px' }}
+      pt={{ base:'35px', md: '100px' }}
     >
       {/* Overlay */}
       <Box
@@ -75,6 +76,7 @@ export default function HeroSection() {
                 I break down complex user experience problems to create integrity-focused solutions that connect billions of people.
                 Let’s Build Something Extraordinary.
               </Text>
+              <Link to="contact" smooth={true} duration={500}>
               <Button
                 sx={{
                   background: "linear-gradient(140deg, #FF6E00, #A629F2)",
@@ -92,6 +94,8 @@ export default function HeroSection() {
               >
                 Consultation Booking
               </Button>
+              </Link>
+             
             </Flex>
           </MotionBox>
 

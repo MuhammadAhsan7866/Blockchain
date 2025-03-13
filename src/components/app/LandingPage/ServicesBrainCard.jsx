@@ -17,6 +17,7 @@ const Card = ({ title, description, icon, shortdes }) => (
     cursor="pointer"
     _hover={{
       "& img.arrowIcon": { opacity: 1, transition: "opacity 0.3s ease-in-out" },
+      boxShadow: "0 0 30px rgba(135, 80, 247, 0.2)",
     }}
   >
     <Flex direction="column" gap="22px">

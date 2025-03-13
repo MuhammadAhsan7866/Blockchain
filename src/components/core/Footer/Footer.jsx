@@ -98,10 +98,10 @@ export default function LargeWithAppLinksAndSocial() {
             <Box pb={'13px'} borderBottom={'1px solid #253538'} w={'70%'}>
               <Text color={'white'}> Services</Text>
             </Box>
-            <Link color={'white'} href={'#'}>Support Mariage</Link>
-            <Link color={'white'} href={'#'}>Safty Security</Link>
-            <Link color={'white'} href={'#'}>Bride Guide</Link>
-            <Link color={'white'} href={'#'}>Groom Guide</Link>
+            <Link color={'white'} href={'#'}>Game Development</Link>
+            <Link color={'white'} href={'#'}>Full Stack Development</Link>
+            <Link color={'white'} href={'#'}>Cloud Solutions</Link>
+            <Link color={'white'} href={'#'}>AI & ML</Link>
           </Stack>
 
           <Stack align={'flex-start'} gap={'14px'}>

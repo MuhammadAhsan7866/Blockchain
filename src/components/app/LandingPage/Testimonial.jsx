@@ -49,7 +49,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <Container maxW={"1340px"} py={{base:'40px',md:'100px'}}>
+    <Container maxW={"1340px"} py={{base:'40px',md:'100px'}} id="testimonials">
       <Flex
         color="white"
         align="center"
@@ -59,8 +59,8 @@ const TestimonialSlider = () => {
         {/* Left Side Text */}
         <VStack align="flex-start" maxW={{base:'100%',md:'40%'}} spacing={4} mb={{base:'45px',md:'0'}} >
           <Text
-            fontSize={{ xl: "28px", lg: "42px", base: "38px", md: "42px" }}
-            lineHeight={{ xl: "54px", base: "36px", md: "53px" }}
+            fontSize={{ xl: "47px", lg: "42px", base: "38px", md: "42px" }}
+            lineHeight={{ xl: "60px", base: "36px", md: "53px" }}
             fontWeight={"900"}
             letterSpacing={"-2%"}
             color={"white"}

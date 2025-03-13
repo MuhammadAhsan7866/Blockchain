@@ -20,12 +20,12 @@ const MotionImg = motion(Img);
 const AboutSection = () => {
   return (
     <Box
-      id="about" // Add this for scrolling
+      id="about"
       pt={{ base: "30px", lg: "85px" }}
       pb={{ base: "30px", lg: "85px" }}
       px={{ base: "20px", md: "30px", lg: "0px" }}
     >
-      <Container maxW={"1340px"} mx={"auto"}>
+      <Container maxW={"1340px"} mx={"auto"} >
         <Flex 
           alignItems={"center"} 
           flexWrap={"wrap"} 
