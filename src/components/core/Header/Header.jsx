@@ -56,7 +56,7 @@ export default function Header() {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
       const top = aboutSection.getBoundingClientRect().top + window.scrollY;
-      const duration = 1500; // Adjust time in milliseconds (1500ms = 1.5s)
+      const duration = 4000; // Adjust time in milliseconds (1500ms = 1.5s)
   
       let startTime = null;
       
