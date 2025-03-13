@@ -52,7 +52,31 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const scrollToSection = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      const top = aboutSection.getBoundingClientRect().top + window.scrollY;
+      const duration = 1500; // Adjust time in milliseconds (1500ms = 1.5s)
+  
+      let startTime = null;
+      
+      const scrollStep = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const easeInOutCubic = progress / duration < 0.5 
+          ? 4 * (progress / duration) ** 3 
+          : 1 - Math.pow(-2 * (progress / duration) + 2, 3) / 2;
+  
+        window.scrollTo(0, window.scrollY + (top - window.scrollY) * easeInOutCubic);
+  
+        if (progress < duration) {
+          requestAnimationFrame(scrollStep);
+        }
+      };
+  
+      requestAnimationFrame(scrollStep);
+    }
+  };
   return (
     <Box
       sx={{
@@ -103,6 +127,7 @@ export default function Header() {
                 _focus={{ boxShadow: "none", bg: "transparent" }}
                 _active={{ bg: "transparent" }}
                 fontWeight={"normal"}
+                onClick={scrollToSection}
               >
                 About
               </MenuButton>
