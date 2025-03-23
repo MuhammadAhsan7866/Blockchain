@@ -1,35 +1,32 @@
-import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
-import HeroSection from "./Banner";
-import AboutSection from "./About";
-import PortfolioServices from "./BrainServices";
-import FeatureProjects from "./FeatureProject";
-import SkillsSection from "./SkillSection";
-import TestimonialSlider from "./Testimonial";
-import ContactForm from "./ContactForm";
-import CompanyLogoSlider from "./Companylogo";
+import { ChakraProvider, Container } from "@chakra-ui/react";
+import Script from "next/script";
+import VideoConverter from "./VideoConterter";
+import BodySection from "./BodyDescription";
+import Info from "./Instructions";
 
-const LandingPage = () => {
+export default function Home() {
   return (
-    <>
-      <Box maxW={"100%"} w="100%" mx="auto" position={"relative"}>
-        <HeroSection />
-         <AboutSection />
-         <PortfolioServices/>
-         <Container maxW={'1320px'} py={'100px'} id="project">
-          <Heading mb={'45px'} color="purple.400" textAlign={'center'}>
-          Featured Projects
+    <ChakraProvider>
+      {/* Google Analytics */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-88098706-1" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-88098706-1');
+        `}
+      </Script>
 
-          </Heading>
-         <FeatureProjects/>
-         </Container>
-          <SkillsSection/>
-          <TestimonialSlider/>
-          <CompanyLogoSlider/>
-          <ContactForm/>
-      </Box>
-    </>
+      {/* Ad Script */}
+      <Script async data-cfasync="false" src="https://alwingulla.com/88/tag.min.js" data-zone="107310" />
+
+      <Container maxW="1100px" p={'157px 0px 50px'}>
+        <VideoConverter />
+      
+      </Container>
+      <BodySection/>
+     <Info/>
+    </ChakraProvider>
   );
-};
-
-export default LandingPage;
+}

@@ -47,12 +47,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: "About", to: "about" },
-    { label: "Services", to: "services" },
-    { label: "Projects", to: "project" },
-    { label: "My Skills", to: "skills" },
-    { label: "Testimonials", to: "testimonials" },
-    { label: "Contact", to: "contact" },
+    { label: "Youtube Downloader", to: "about" },
+    { label: "Convert YouTube to MP3", to: "services" },
+    { label: "Youtube to MP4 Converter", to: "project" },
+ 
+    
   ];
 
   return (
@@ -71,7 +70,7 @@ export default function Header() {
         <Box w={{ base: "100%", md: "25%" }}>
           <Link to="banner" smooth={true} duration={500}>
             <Heading fontSize={"32px"} color={"white"} cursor={"pointer"}>
-              Portfolio
+             YT2
             </Heading>
           </Link>
         </Box>
