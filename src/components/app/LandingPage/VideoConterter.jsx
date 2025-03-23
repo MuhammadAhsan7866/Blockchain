@@ -39,7 +39,8 @@ const VideoConverter = () => {
   };
 
   return (
-    <Box border={"1px solid #ccc"} p={"60px 30px 80px"}>
+    <Box>
+ <Box border={"1px solid #ccc"} p={"60px 30px 80px"}>
       <Text
         fontSize="30px"
         fontWeight="500"
@@ -93,8 +94,12 @@ const VideoConverter = () => {
       <Text textAlign={"center"} color={'white'}>
         By using our service you are accepting our Terms of use.
       </Text>
-      <IframeResizer src={iframeSrc} />
+    
     </Box>
+<IframeResizer src={iframeSrc} />
+    </Box>
+   
+    
   );
 };
 
