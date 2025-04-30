@@ -13,9 +13,9 @@ import {
 
 const YouTubeDownloadGuide = () => {
   return (
-    <Box py={10} maxW="1240px" mx="auto">
+    <Box py={10} maxW="1240px" mx="auto" px={{base:'25px',md:'0px'}}>
       {/* Header */}
-      <Text fontSize="40px" fontWeight="500" textAlign="center" mb={8}>
+      <Text fontSize={{base:'26px',md:'40px'}} fontWeight="500" textAlign="center" mb={8}>
         Download YouTube Videos: Your Complete Guide
       </Text>
 

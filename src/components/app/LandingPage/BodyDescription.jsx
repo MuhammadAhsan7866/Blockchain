@@ -12,7 +12,7 @@ import {
 
 const PlatformSupportSection = () => {
   return (
-    <Box py={10} maxW="1240px" mx="auto" textAlign="center">
+    <Box py={10} maxW="1240px" mx="auto" textAlign="center" px={{base:'25px',md:'0px'}}>
       <Text fontSize="lg" color="gray.600" mb={6}>
         SSYouTube is your go-to online video downloader, crafted to bypass
         YouTubes download restrictions. We bridge the gap by offering a fast and
@@ -25,13 +25,19 @@ const PlatformSupportSection = () => {
       </Text>
 
       <Flex justify="center" gap={12} mb={10} flexWrap="wrap">
-        <Image src="/windows.svg" alt="Windows" boxSize="150px" />
-        <Image src="/apple.svg" alt="Apple" boxSize="150px" />
-        <Image src="/android.svg" alt="Android" boxSize="150px" />
-        <Image src="/linux.svg" alt="Linux" boxSize="150px" />
+        <Image src="/windows.svg" alt="Windows" boxSize={{base:'124px',md:'150px'}} />
+        <Image src="/apple.svg" alt="Apple" boxSize={{base:'124px',md:'150px'}} />
+        <Image src="/android.svg" alt="Android" boxSize={{base:'124px',md:'150px'}} />
+        <Image src="/linux.svg" alt="Linux" boxSize={{base:'124px',md:'150px'}} />
       </Flex>
 
-      <VStack textAlign={'left'} spacing={4}  mx="auto" color="black" fontSize={'17px'}>
+      <VStack
+        textAlign={"left"}
+        spacing={4}
+        mx="auto"
+        color="black"
+        fontSize={"17px"}
+      >
         <UnorderedList spacing={3}>
           <ListItem>
             Experience the best YouTube video downloading with our top-rated

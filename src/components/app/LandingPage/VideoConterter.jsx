@@ -9,13 +9,17 @@ import {
   Flex,
   InputGroup,
   InputRightElement,
+  useBreakpointValue,
 } from "@chakra-ui/react";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import IframeResizer from "./IframeResizer";
 
 const VideoConverter = () => {
   const [url, setUrl] = useState("");
   const [iframeSrc, setIframeSrc] = useState("");
   const [downloadUrl, setDownloadUrl] = useState("");
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const handleSearch = () => {
     if (!url) {
@@ -47,58 +51,56 @@ const VideoConverter = () => {
   };
 
   return (
-    <Box p={"60px 30px 80px"}>
+    <Box p={{ base: "40px 20px", md: "60px 30px 80px" }}>
       <Text
-        fontSize="30px"
+        fontSize={{base:'24px',md:'30px'}}
         fontWeight="500"
         textAlign="center"
         color="white"
         mb={6}
       >
-        Download Video and Audio from YouTube
+      YouTube Video Downloader
       </Text>
 
       <Flex justify="center">
-        <Box   border="1px solid white" py={'5px'} px={'8px'} w={'65%'} bg={'white'}>
-        <InputGroup maxW="700px" w="100%">
-          <Input
-            placeholder="Enter YouTube URL"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            color="white"
-            pr="8.5rem"
-            bg="transparent"
-            border="none"
-            borderRadius="12px"
-            h="52px"
-            outline={'none'}
-            _focusVisible={'none'}
-          />
-          <InputRightElement width="8.5rem" h="100%">
-            <Button
-              onClick={handleSearch}
-              h="100%"
-              borderLeftRadius="7px"
-             w={'100%'}
-              sx={{
-                background: "#DC3545",
-                color: "white",
-                fontSize: "14px",
-                padding: "0 20px",
-                height: "100%",
-              
-                transition: "background 0.3s ease",
-                _hover: {
-                  background: "#DC3546",
-                },
-              }}
-            >
-              Convert
-            </Button>
-          </InputRightElement>
-        </InputGroup>
+        <Box
+          border="1px solid white"
+          py={{ base: "2px", md: "5px" }}
+          px={{ base: "2px", md: "8px" }}
+          w={{ base: "95%", md: "65%" }}
+          bg="white"
+        
+        >
+          <InputGroup maxW="700px" w="100%" size="md">
+            <Input
+              placeholder="Paste your video link here"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              color="black"
+              bg="transparent"
+              border="none"
+              borderRadius="0"
+              h={{ base: "40px", md: "52px" }}
+              _placeholder={{ color: "gray.500" }}
+              _focusVisible={{ outline: "none", boxShadow: "none" }}
+            />
+            <InputRightElement width={{ base: "3rem", md: "8.5rem" }} h="100%">
+              <Button
+                onClick={handleSearch}
+                h="100%"
+                w="100%"
+                p="0"
+                borderLeftRadius="7px"
+                bg="#DC3545"
+                color="white"
+                fontSize={{ base: "20px", md: "14px" }}
+                _hover={{ bg: "#DC3546" }}
+              >
+                {isMobile ? <ArrowForwardIcon /> : "Download"}
+              </Button>
+            </InputRightElement>
+          </InputGroup>
         </Box>
-       
       </Flex>
 
       <Text mt={4} textAlign="center" color="white">
