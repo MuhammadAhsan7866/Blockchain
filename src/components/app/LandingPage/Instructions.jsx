@@ -1,102 +1,90 @@
+// components/YouTubeDownloadGuide.js
+
 import {
   Box,
-  Button,
   Flex,
-  Heading,
-  List,
-  ListItem,
   Text,
-  Image
+  Image,
+  VStack,
+  UnorderedList,
+  ListItem,
+  Link,
 } from "@chakra-ui/react";
 
-const Info = () => {
-  const formats = [
-    { name: "MP4", image: "/icon1.webp" },
-    { name: "MP3",image: "/icon2.webp" },
-    { name: "3GP", image: "/icon3.webp" },
-    { name: "WEBM",image: "/icon4.webp" },
-    { name: "M4A", image: "/icon5.webp" }
-  ];
 
+const YouTubeDownloadGuide = () => {
   return (
-    <Box
-      maxW="1140px"
-      mx="auto"
-      p={6}
-      mt={'50px'}
-      color="gray.800"
-      borderRadius="lg"
-     
-    >
-      <Heading as="h1" size="lg" mb={4} textAlign="center" color={'white'}>
-        Download YouTube Videos Free with YT1s
-      </Heading>
-
-      <Flex justify="center" wrap="wrap" gap={'30px'} my={8}>
-        {formats.map((format) => (
-          <Box
-            key={format.name}
-        
-          >
-            <Image src={format.image} alt={format.name}  mx="auto" />
-          </Box>
-        ))}
-      </Flex>
-
-      <Text mb={4} textAlign="justify" color={'white'}>
-        YT1s gives users the ability to download YouTube videos in a variety of
-        qualities, including standard definition (SD), high definition (HD), and
-        even 4K resolution, depending on the original video quality on YouTube.
-        This flexibility empowers users to choose the quality that best suits
-        their preferences and device capabilities. One of the main advantages of
-        YT1s’ multiple quality options is the flexibility it provides to users
-        with varying internet speeds and storage capacities. Users can choose
-        lower quality to save data or disk space, while those with fast
-        connections or devices capable of displaying clear visuals can enjoy
-        videos in the highest resolution available. This flexibility ensures an
-        optimal viewing experience for every user, regardless of their device or
-        internet connection, making YT1s a versatile and user-oriented platform
-        for downloading YouTube videos.
+    <Box py={10} maxW="1240px" mx="auto">
+      {/* Header */}
+      <Text fontSize="40px" fontWeight="500" textAlign="center" mb={8}>
+      Download YouTube Videos: Your Complete Guide
       </Text>
-      <Flex justifyContent={'center'} alignItems={'center'} mt={'30px'}>
-      <Button
-         sx={{
-          background: "linear-gradient(140deg, #FF6E00, #A629F2)",
-          color: "white",
-          padding: "15px 30px",
-          borderRadius: "150px",
-          height: "52px",
-          boxShadow: "0px 8px 18px -3px rgba(153, 1, 255, 0.32)",
-          transition: "background 0.3s ease",
-          _hover: {
-            background: "linear-gradient(260deg, #FF4094, #A629F2)",
-          },
-        }}
-        >
 
-          Convert Now
-        </Button>
-
+      {/* Step-by-step images */}
+      <Flex justify="center" gap={10} flexWrap="wrap" mb={8}>
+        <VStack spacing={4}>
+          
+          <Image src="/howto2.png" alt="Step 1"w={'90%'} />
+          <Text textAlign="center" maxW="360px" fontSize={'17px'}>
+            Get your favorite YouTube videos downloaded with these
+            straightforward instructions:
+          </Text>
+        </VStack>
+        <VStack spacing={4}>
+        
+          <Image src="/howto3.png" alt="Step 2" w={'90%'} />
+          <Text textAlign="center" maxW="360px" fontSize={'17px'}>
+            Find the video you want on YouTube and grab the URL from your
+            browser.
+          </Text>
+        </VStack>
+        <VStack spacing={4}>
+        
+          <Image src="/howto3.png" alt="Step 3"w={'90%'} />
+          <Text textAlign="center" maxW="360px" fontSize={'17px'}>
+            Insert the YouTube video link into our download box above.
+          </Text>
+        </VStack>
       </Flex>
-     
 
-      <Heading as="h2" size="md" mt={8} mb={4} textAlign="center" color={'white'}>
-        Download YouTube Videos Online in 3 Simple Steps
-      </Heading>
-      <List spacing={2} styleType="decimal" pl={4}>
-        <ListItem color={'white'}>
-          Enter a keyword or paste a YouTube video link into the input box.
-        </ListItem >
-        <ListItem color={'white'}>
-          Select the desired MP4 or MP3 format and click the Download button.
-        </ListItem>
-        <ListItem color={'white'}>
-          Wait a moment for the conversion to complete, then download. Fast,
-          simple, and hassle-free.
-        </ListItem>
-      </List>
+      {/* Text Guide Section */}
+      <Box  mb={10}>
+        <Text fontSize="2xl" fontWeight="semibold" mb={2} textAlign={'center'}>
+          How to Download YouTube Videos Without an Add-on
+        </Text>
+        <Text color="gray.600" mb={4} textAlign="left">
+          Learn how to download a YouTube video without a video downloader
+          add-on! Simply add 'ss' to the video URL to quickly save the video to
+          your device.
+        </Text>
+        <UnorderedList textAlign="left" maxW="1240px" mx="auto" spacing={2}>
+          <ListItem>
+            Original URL:{" "}
+            <Link
+              color="blue.500"
+              href="https://youtube.com/watch?v=YOCmSsBfafg"
+              isExternal
+            >
+              https://youtube.com/watch?v=YOCmSsBfafg
+            </Link>
+          </ListItem>
+          <ListItem>
+            Modified URL with 'ss':{" "}
+            <Link
+              color="blue.500"
+              href="https://ssyoutube.com/watch?v=YOCmSsBfafg"
+              isExternal
+            >
+              https://ssyoutube.com/watch?v=YOCmSsBfafg
+            </Link>
+          </ListItem>
+        </UnorderedList>
+      </Box >
+    
+   
+     
     </Box>
   );
 };
 
-export default Info;
+export default YouTubeDownloadGuide;

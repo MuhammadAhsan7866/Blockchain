@@ -1,6 +1,15 @@
 "use client";
 import { useState } from "react";
-import { VStack, Input, Button, Text, Box, Flex } from "@chakra-ui/react";
+import {
+  VStack,
+  Input,
+  Button,
+  Text,
+  Box,
+  Flex,
+  InputGroup,
+  InputRightElement,
+} from "@chakra-ui/react";
 import IframeResizer from "./IframeResizer";
 
 const VideoConverter = () => {
@@ -14,8 +23,7 @@ const VideoConverter = () => {
       return;
     }
 
-    const youtubeRegex =
-      /(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/|\/shorts\/)/;
+    const youtubeRegex = /(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/|\/shorts\/)/;
     const match = url.split(youtubeRegex);
 
     if (match[2] && match[2].length > 10) {
@@ -39,66 +47,66 @@ const VideoConverter = () => {
   };
 
   return (
-  
- <Box border={"1px solid #ccc"} p={"60px 30px 80px"}>
+    <Box p={"60px 30px 80px"}>
       <Text
         fontSize="30px"
         fontWeight="500"
-        textAlign={"center"}
-        color={"white"}
+        textAlign="center"
+        color="white"
+        mb={6}
       >
         Download Video and Audio from YouTube
       </Text>
-      <Flex
-        spacing={4}
-        p={5}
-        justify={"center"}
-        alignItems={"center"}
-        gap={"15px"}
-      >
-        <Box
-          border={"1px solid white "}
-          w={"100%"}
-          p={"7px"}
-          borderRadius={"12px"}
-        >
+
+      <Flex justify="center">
+        <Box   border="1px solid white" py={'5px'} px={'8px'} w={'65%'} bg={'white'}>
+        <InputGroup maxW="700px" w="100%">
           <Input
             placeholder="Enter YouTube URL"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            border={"none"}
-            outline={"none"}
-            _focusVisible={"none"}
-            color={"white"}
+            color="white"
+            pr="8.5rem"
+            bg="transparent"
+            border="none"
+            borderRadius="12px"
+            h="52px"
+            outline={'none'}
+            _focusVisible={'none'}
           />
+          <InputRightElement width="8.5rem" h="100%">
+            <Button
+              onClick={handleSearch}
+              h="100%"
+              borderLeftRadius="7px"
+             w={'100%'}
+              sx={{
+                background: "#DC3545",
+                color: "white",
+                fontSize: "14px",
+                padding: "0 20px",
+                height: "100%",
+              
+                transition: "background 0.3s ease",
+                _hover: {
+                  background: "#DC3546",
+                },
+              }}
+            >
+              Convert
+            </Button>
+          </InputRightElement>
+        </InputGroup>
         </Box>
-
-        <Button
-          onClick={handleSearch}
-          sx={{
-            background: "linear-gradient(140deg, #FF6E00, #A629F2)",
-            color: "white",
-            padding: "15px 30px",
-            borderRadius: "150px",
-            height: "52px",
-            boxShadow: "0px 8px 18px -3px rgba(153, 1, 255, 0.32)",
-            transition: "background 0.3s ease",
-            _hover: {
-              background: "linear-gradient(260deg, #FF4094, #A629F2)",
-            },
-          }}
-        >
-          Convert Video
-        </Button>
+       
       </Flex>
-      <Text textAlign={"center"} color={'white'}>
+
+      <Text mt={4} textAlign="center" color="white">
         By using our service you are accepting our Terms of use.
       </Text>
+
       <IframeResizer src={iframeSrc} />
     </Box>
-
-  
-    
   );
 };
 

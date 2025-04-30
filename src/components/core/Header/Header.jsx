@@ -19,44 +19,33 @@ import { Link } from "react-scroll";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [headerStyles, setHeaderStyles] = useState({
-    backgroundColor: "#121225",
-    backdropFilter: "blur(10px)",
-  });
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setHeaderStyles({
-        backgroundColor: "#050709",
-        backdropFilter: "blur(10px)",
-        boxShadow: "0 0 30px rgba(135, 80, 247, 0.2)",
-      });
-    } else {
-      setHeaderStyles({
-        backgroundColor: "#121225",
-        backdropFilter: "blur(10px)",
-      });
-    }
+    setIsScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
     { label: "Youtube Downloader", to: "about" },
     { label: "Convert YouTube to MP3", to: "services" },
     { label: "Youtube to MP4 Converter", to: "project" },
- 
-    
   ];
 
   return (
     <Box
-      sx={{ ...headerStyles, position: "fixed", width: "100%", zIndex: 10 }}
+      sx={{
+        backgroundColor: isScrolled ? "#08003A" : "transparent",
+        backdropFilter: "blur(10px)",
+        boxShadow: isScrolled ? "0 0 30px rgba(135, 80, 247, 0.2)" : "none",
+        position: "fixed",
+        width: "100%",
+        zIndex: 10,
+      }}
       px={4}
     >
       <Flex
@@ -70,7 +59,7 @@ export default function Header() {
         <Box w={{ base: "100%", md: "25%" }}>
           <Link to="banner" smooth={true} duration={500}>
             <Heading fontSize={"32px"} color={"white"} cursor={"pointer"}>
-             YT2
+              YT2
             </Heading>
           </Link>
         </Box>
@@ -90,20 +79,22 @@ export default function Header() {
             ))}
             <Link to="contact" smooth={true} duration={500}>
               <Button
-                sx={{
-                  background: "linear-gradient(140deg, #FF6E00, #A629F2)",
-                  color: "white",
-                  padding: "15px 30px",
-                  borderRadius: "150px",
-                  height: "52px",
-                  boxShadow: "0px 8px 18px -3px rgba(153, 1, 255, 0.32)",
-                  transition: "background 0.3s ease",
-                  _hover: {
-                    background: "linear-gradient(260deg, #FF4094, #A629F2)",
-                  },
-                }}
+              w={'100%'}
+               sx={{
+                
+                background: "#DC3545",
+                color: "white",
+                fontSize: "14px",
+                padding: "0 30px",
+                height: "45px",
+              
+                transition: "background 0.3s ease",
+                _hover: {
+                  background: "#DC3546",
+                },
+              }}
               >
-               Let&apos;s Talk
+                Let&apos;s Talk
               </Button>
             </Link>
           </HStack>

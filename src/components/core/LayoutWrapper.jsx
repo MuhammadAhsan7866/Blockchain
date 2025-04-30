@@ -6,7 +6,7 @@ import Header from "./Header/Header";
 const LayoutWrapper = ({ children }) => {
   return (
     <Box
-      bg={'#0C0714'}
+      bg={'white'}
     >
       
       <Header/>

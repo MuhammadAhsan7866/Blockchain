@@ -1,84 +1,56 @@
-import {
-  Box,
-  Container,
-  Stack,
-  SimpleGrid,
-  Text,
-  Link,
-  Img,
-  Flex,
-  Heading,
-  HStack,
-} from "@chakra-ui/react";
+'use client';
 
-const ListHeader = ({ children }) => {
+import { Box, Flex, Text, Link, VStack, HStack, Stack, useColorModeValue } from '@chakra-ui/react';
+import { FaHeart } from 'react-icons/fa';
+
+const Footer = () => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
-      {children}
-    </Text>
+    <Box bg="black" color="white" py={10} px={5}>
+      <Stack
+        direction={{ base: 'column', md: 'row' }}
+        spacing={10}
+        justify="space-between"
+        align={{ base: 'flex-start', md: 'center' }}
+        maxW="7xl"
+        mx="auto"
+      >
+        {/* Section 1 */}
+        <VStack align="flex-start" spacing={2}>
+          <Text fontWeight="bold">Download Youtube to mp4</Text>
+          <Link color="green.400" href="#">Youtube Shorts</Link>
+          <Link color="green.400" href="#">Twitter Video Downloader</Link>
+        </VStack>
+
+        {/* Section 2 */}
+        <VStack align="flex-start" spacing={2}>
+          <Link color="green.400" href="#">Facebook Video Downloader</Link>
+        </VStack>
+
+        {/* Section 3 */}
+        <VStack align="flex-start" spacing={2}>
+          <Text fontWeight="bold">About us</Text>
+          <Link color="green.400" href="#">Privacy Policy</Link>
+          <Link color="green.400" href="#">Terms of Service</Link>
+          <Link color="green.400" href="#">Contact</Link>
+          <Link color="green.400" href="#">API</Link>
+        </VStack>
+
+        {/* Section 4 */}
+        <VStack align="flex-start" spacing={2}>
+          <Text fontWeight="bold">Partners</Text>
+          <Link color="green.400" href="#">SSSTIK</Link>
+        </VStack>
+      </Stack>
+
+      {/* Copyright */}
+      <Flex justify="center" align="center" mt={10}>
+        <Text fontSize="sm" color="gray.400" textAlign="center">
+          © 2025 YouTube Downloader, made with{' '}
+          <Box as={FaHeart} display="inline-block" color="orange.400" mx={1} /> by SSYouTube.
+        </Text>
+      </Flex>
+    </Box>
   );
 };
 
-export default function LargeWithAppLinksAndSocial() {
-  return (
-    <Box
-      backdropFilter="blur(10px)"
-      bgImage="url('/ftrbg.avif')"
-      backgroundSize="cover"
-      backgroundPosition="center"
-      width="100%"
-      borderTopLeftRadius="64px"
-      borderTopRightRadius="64px"
-      opacity="1"
-      borderBottomWidth="0px"
-      borderLeftWidth="0px"
-      borderRightWidth="0px"
-      borderTopWidth="1px"
-      borderStyle="solid"
-      borderColor="rgba(130, 130, 130, 0.4)"
-      p={{
-        base: "25px",
-        sm: "25px",
-        md: "30px",
-        lg: "40px",
-        xl: "50px",
-        xxl: "70px",
-      }}
-    >
-      <Container as={Stack} maxW={"1440px"} pb={10}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 1 }} spacing={8}>
-         
-         
-          <HStack align={"flex-start"} gap={"14px"} justifyContent={'center'} alignItems={'center'}>
-           
-            <Link color={"white"} href={"#"} fontSize={'18px'}>
-              Contact Us{" "}
-            </Link>
-            <Link color={"white"} href={"#"} fontSize={'18px'}>
-              Privacy Policy
-            </Link>
-            <Link color={"white"} href={"#"} fontSize={'18px'}>
-              Terms of Service
-            </Link>
-          </HStack>
-        </SimpleGrid>
-      </Container>
-
-      <Box borderTopWidth={1} borderStyle={"solid"} borderColor={"#253538"}>
-        <Container
-          as={Stack}
-          maxW={"6xl"}
-          py={4}
-          direction={{ base: "column", md: "row" }}
-          spacing={4}
-          justify={"center"}
-          align={"center"}
-        >
-          <Text color={"#7B7A7A"}>
-            Copyright © 2025 Yt2 Converter. All rights reserved
-          </Text>
-        </Container>
-      </Box>
-    </Box>
-  );
-}
+export default Footer;

@@ -1,90 +1,66 @@
+// components/PlatformSupportSection.js
+
 import {
   Box,
-  Heading,
+  Flex,
   Text,
+  VStack,
   Image,
-  SimpleGrid,
-  Container,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 
-const features = [
-  {
-    icon: "⏱️",
-    title: "Efficient Video Downloads",
-    description:
-      "YT1s enables quick and efficient downloading of YouTube videos, allowing users to save their favorite content for offline viewing hassle-free. Its streamlined process ensures prompt access to videos, enhancing user convenience and satisfaction.",
-  },
-  {
-    icon: "🔄",
-    title: "User-Friendly Interface",
-    description:
-      "With its simple and intuitive interface, YT1s makes the video downloading process accessible to users of all technical levels. Clear instructions and easy navigation contribute to a seamless experience, enabling even novice users to download videos effortlessly.",
-  },
-  {
-    icon: "🔒",
-    title: "Cross-Platform Compatibility",
-    description:
-      "YT1s is compatible with various devices and operating systems, including desktop computers, laptops, smartphones, and tablets. This broad compatibility ensures users can access the platform and download videos regardless of their preferred device, enhancing accessibility and convenience.",
-  },
-  {
-    icon: "🔒",
-    title: "Cross-Platform Compatibility",
-    description:
-      "YT1s is compatible with various devices and operating systems, including desktop computers, laptops, smartphones, and tablets. This broad compatibility ensures users can access the platform and download videos regardless of their preferred device, enhancing accessibility and convenience.",
-  },
-  {
-    icon: "🔒",
-    title: "Cross-Platform Compatibility",
-    description:
-      "YT1s is compatible with various devices and operating systems, including desktop computers, laptops, smartphones, and tablets. This broad compatibility ensures users can access the platform and download videos regardless of their preferred device, enhancing accessibility and convenience.",
-  },
-  {
-    icon: "🔒",
-    title: "Cross-Platform Compatibility",
-    description:
-      "YT1s is compatible with various devices and operating systems, including desktop computers, laptops, smartphones, and tablets. This broad compatibility ensures users can access the platform and download videos regardless of their preferred device, enhancing accessibility and convenience.",
-  },
-];
-
-const FeatureCard = ({ icon, title, description }) => (
-  <Box bg="#011936" p={"30px"} borderRadius="lg" boxShadow="md">
-    <Image
-      src={`https://openui.fly.dev/openui/100x100.svg?text=${icon}`}
-      alt={title}
-      mx="auto"
-      mb={4}
-    />
-    <Heading as="h2" size="md" mb={2} textAlign={"center"} color={"white"}>
-      {title}
-    </Heading>
-    <Text color={"white"} textAlign={"center"} mb={"35px"} >
-      {description}
-    </Text>
-  </Box>
-);
-
-const BodySection = () => {
+const PlatformSupportSection = () => {
   return (
-    <Container maxW="1140px" py={6} px={4}  borderRadius="lg">
-      <Heading as="h1" size="xl" textAlign="center" mb={6} color={'white'}>
-        Best YouTube Video Downloader
-      </Heading>
-      {[
-        "YT1s offers a convenient solution for downloading YouTube videos effortlessly. As an increasingly popular YouTube downloader, YT1s provides users with a seamless experience to access their favorite content offline.",
-        "One of the key advantages of YT1s is its compatibility with various devices and operating systems, making it accessible to a broad audience. Whether you're using a desktop computer, laptop, smartphone, or tablet, YT1s ensures a smooth downloading process.",
-        "Moreover, YT1s prioritizes user satisfaction by continually optimizing its platform for performance and reliability. With fast download speeds and high-quality output, users can enjoy their downloaded videos without compromising on viewing experience.",
-      ].map((text, index) => (
-        <Text key={index} color={'white'} mb={4} fontSize="18px" >
-          {text}
-        </Text>
-      ))}
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6} mt={8}>
-        {features.map((feature, index) => (
-          <FeatureCard key={index} {...feature} />
-        ))}
-      </SimpleGrid>
-    </Container>
+    <Box py={10} maxW="1240px" mx="auto" textAlign="center">
+      <Text fontSize="lg" color="gray.600" mb={6}>
+        SSYouTube is your go-to online video downloader, crafted to bypass
+        YouTubes download restrictions. We bridge the gap by offering a fast and
+        reliable way to download YouTube videos. With our user-friendly
+        interface, accessing your favorite content has never been easier.
+      </Text>
+
+      <Text fontSize="2xl" fontWeight="bold" mb={6}>
+        Supported Platforms:
+      </Text>
+
+      <Flex justify="center" gap={12} mb={10} flexWrap="wrap">
+        <Image src="/windows.svg" alt="Windows" boxSize="150px" />
+        <Image src="/apple.svg" alt="Apple" boxSize="150px" />
+        <Image src="/android.svg" alt="Android" boxSize="150px" />
+        <Image src="/linux.svg" alt="Linux" boxSize="150px" />
+      </Flex>
+
+      <VStack textAlign={'left'} spacing={4}  mx="auto" color="black" fontSize={'17px'}>
+        <UnorderedList spacing={3}>
+          <ListItem>
+            Experience the best YouTube video downloading with our top-rated
+            tool – completely free.
+          </ListItem>
+          <ListItem>
+            Download content in your preferred quality: from MP4 to MP3,
+            standard to Full HD resolution.
+          </ListItem>
+          <ListItem>
+            Perfect compatibility across all devices – grab your favorite videos
+            on desktop or mobile.
+          </ListItem>
+          <ListItem>
+            Convert YouTube videos with just a few simple clicks using our
+            streamlined platform.
+          </ListItem>
+          <ListItem>
+            Get lightning-fast downloads and unlimited video access without
+            spending a dime.
+          </ListItem>
+          <ListItem>
+            Master YouTube downloading with our comprehensive guide and expert
+            tips.
+          </ListItem>
+        </UnorderedList>
+      </VStack>
+    </Box>
   );
 };
 
-export default BodySection;
+export default PlatformSupportSection;
