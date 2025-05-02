@@ -43,14 +43,7 @@ const YouTubeDownloadGuide = () => {
       >
         Download YouTube Videos: Your Complete Guide
       </Heading>
-      <Text
-        fontSize={{ base: "26px", md: "40px" }}
-        fontWeight="500"
-        textAlign="center"
-        mb={8}
-      >
-        Download YouTube Videos: Your Complete Guide
-      </Text>
+      
 
       {/* Step-by-step Images */}
       <Flex justify="center" gap={10} flexWrap="wrap" mb={8}>
