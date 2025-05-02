@@ -1,4 +1,4 @@
-// components/YouTubeDownloadGuide.js
+"use client";
 
 import {
   Box,
@@ -70,12 +70,12 @@ const YouTubeDownloadGuide = () => {
           How to Download YouTube Videos Without an Add-on
         </Text>
         <Text color="gray.600" mb={4} textAlign="left">
-          Learn how to download a YouTube video without a video downloader
-          add-on! Simply add 'ss' to the video URL to quickly save the video to your device.
+          Learn how to download a YouTube video without a video downloader add-on! Simply add
+          {' '}<strong>ss</strong>{' '}to the video URL to quickly save the video to your device.
         </Text>
         <UnorderedList textAlign="left" maxW="1240px" mx="auto" spacing={2}>
           <ListItem>
-            Original URL:{" "}
+            Original URL:&nbsp;
             <Link
               color="blue.500"
               href="https://youtube.com/watch?v=YOCmSsBfafg"
@@ -85,7 +85,7 @@ const YouTubeDownloadGuide = () => {
             </Link>
           </ListItem>
           <ListItem>
-            Modified URL with 'ss':{" "}
+            Modified URL with &quot;ss&quot;:&nbsp;
             <Link
               color="blue.500"
               href="https://ssyoutube.com/watch?v=YOCmSsBfafg"
