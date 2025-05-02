@@ -58,9 +58,27 @@ export default function Header() {
       >
         <Box w={{ base: "100%", md: "25%" }}>
           <Link to="banner" smooth={true} duration={500}>
-            <Heading fontSize={"32px"} color={"white"} cursor={"pointer"}>
-              YT2
-            </Heading>
+            <Flex align="center">
+              <Link
+                as={NextLink}
+                href="https://blockchain-silk-delta.vercel.app/"
+                isExternal
+                display="flex"
+                alignItems="center"
+                _hover={{ textDecoration: "none" }}
+              >
+                <Image
+                  src="/logo.svg"
+                  alt="ssyoutube"
+                  loading="lazy"
+                  boxSize="30px"
+                  mr={2}
+                />
+                <Text fontWeight="bold" fontSize="lg">
+                  ssyoutube
+                </Text>
+              </Link>
+            </Flex>
           </Link>
         </Box>
 
@@ -79,20 +97,19 @@ export default function Header() {
             ))}
             <Link to="contact" smooth={true} duration={500}>
               <Button
-              w={'100%'}
-               sx={{
-                
-                background: "#DC3545",
-                color: "white",
-                fontSize: "14px",
-                padding: "0 30px",
-                height: "45px",
-              
-                transition: "background 0.3s ease",
-                _hover: {
-                  background: "#DC3546",
-                },
-              }}
+                w={"100%"}
+                sx={{
+                  background: "#DC3545",
+                  color: "white",
+                  fontSize: "14px",
+                  padding: "0 30px",
+                  height: "45px",
+
+                  transition: "background 0.3s ease",
+                  _hover: {
+                    background: "#DC3546",
+                  },
+                }}
               >
                 Let&apos;s Talk
               </Button>
