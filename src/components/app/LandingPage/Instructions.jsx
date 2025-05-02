@@ -12,39 +12,56 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
+const steps = [
+  {
+    image: "/howto2.png",
+    alt: "How to Step 1",
+    text: "Get your favorite YouTube videos downloaded with these straightforward instructions:",
+  },
+  {
+    image: "/howto3.png",
+    alt: "How to Step 2",
+    text: "Find the video you want on YouTube and grab the URL from your browser.",
+  },
+  {
+    image: "/howto3.png",
+    alt: "How to Step 3",
+    text: "Insert the YouTube video link into our download box above.",
+  },
+];
+
 const YouTubeDownloadGuide = () => {
   return (
-    <Box py={10} maxW="1240px" mx="auto" px={{base:'25px',md:'0px'}}>
-      {/* Header */}
-      <Heading as="h1" size="xl" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
+    <Box py={10} maxW="1240px" mx="auto" px={{ base: "25px", md: "0px" }}>
+      {/* Heading */}
+      <Heading
+        as="h1"
+        size="xl"
+        textAlign="center"
+        mb={8}
+        display={{ base: "none", md: "block" }}
+      >
         Download YouTube Videos: Your Complete Guide
       </Heading>
-      <Text fontSize={{base:'26px',md:'40px'}} fontWeight="500" textAlign="center" mb={8}>
+      <Text
+        fontSize={{ base: "26px", md: "40px" }}
+        fontWeight="500"
+        textAlign="center"
+        mb={8}
+      >
         Download YouTube Videos: Your Complete Guide
       </Text>
 
-      {/* Step-by-step images */}
+      {/* Step-by-step Images */}
       <Flex justify="center" gap={10} flexWrap="wrap" mb={8}>
-        <VStack spacing={4}>
-          <Image src="/howto2.png" alt="Step 1" w="90%" />
-          <Text textAlign="center" maxW="360px" fontSize="17px">
-            Get your favorite YouTube videos downloaded with these
-            straightforward instructions:
-          </Text>
-        </VStack>
-        <VStack spacing={4}>
-          <Image src="/howto3.png" alt="Step 2" w="90%" />
-          <Text textAlign="center" maxW="360px" fontSize="17px">
-            Find the video you want on YouTube and grab the URL from your
-            browser.
-          </Text>
-        </VStack>
-        <VStack spacing={4}>
-          <Image src="/howto3.png" alt="Step 3" w="90%" />
-          <Text textAlign="center" maxW="360px" fontSize="17px">
-            Insert the YouTube video link into our download box above.
-          </Text>
-        </VStack>
+        {steps.map((step, index) => (
+          <VStack key={index} spacing={4}>
+            <Image src={step.image} alt={step.alt} w="90%" />
+            <Text textAlign="center" maxW="360px" fontSize="17px">
+              {step.text}
+            </Text>
+          </VStack>
+        ))}
       </Flex>
 
       {/* Text Guide Section */}
@@ -54,8 +71,7 @@ const YouTubeDownloadGuide = () => {
         </Text>
         <Text color="gray.600" mb={4} textAlign="left">
           Learn how to download a YouTube video without a video downloader
-          add-on! Simply add &apos;ss&apos; to the video URL to quickly save the
-          video to your device.
+          add-on! Simply add 'ss' to the video URL to quickly save the video to your device.
         </Text>
         <UnorderedList textAlign="left" maxW="1240px" mx="auto" spacing={2}>
           <ListItem>
@@ -69,7 +85,7 @@ const YouTubeDownloadGuide = () => {
             </Link>
           </ListItem>
           <ListItem>
-            Modified URL with &apos;ss&apos;:{" "}
+            Modified URL with 'ss':{" "}
             <Link
               color="blue.500"
               href="https://ssyoutube.com/watch?v=YOCmSsBfafg"

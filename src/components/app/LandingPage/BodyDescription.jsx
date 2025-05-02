@@ -11,16 +11,39 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
+const supportedPlatforms = [
+  { src: "/windows.svg", alt: "Windows" },
+  { src: "/apple.svg", alt: "Apple" },
+  { src: "/android.svg", alt: "Android" },
+  { src: "/linux.svg", alt: "Linux" },
+];
+
+const features = [
+  "Experience the best YouTube video downloading with our top-rated tool – completely free.",
+  "Download content in your preferred quality: from MP4 to MP3, standard to Full HD resolution.",
+  "Perfect compatibility across all devices – grab your favorite videos on desktop or mobile.",
+  "Convert YouTube videos with just a few simple clicks using our streamlined platform.",
+  "Get lightning-fast downloads and unlimited video access without spending a dime.",
+  "Master YouTube downloading with our comprehensive guide and expert tips.",
+];
+
 const PlatformSupportSection = () => {
   return (
-    <Box py={10} maxW="1240px" mx="auto" textAlign="center" px={{base:'25px',md:'0px'}}>
-      <Heading as="h1" size="xl" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
+    <Box
+      py={10}
+      maxW="1240px"
+      mx="auto"
+      px={{ base: "25px", md: "0px" }}
+      textAlign="center"
+    >
+      <Heading as="h1" size="xl" mb={8} display={{ base: "none", md: "block" }}>
         SSYouTube - Your Ultimate Video Downloading Solution
       </Heading>
+
       <Text fontSize="lg" color="gray.600" mb={6}>
         SSYouTube is your go-to online video downloader, crafted to bypass
-        YouTubes download restrictions. We bridge the gap by offering a fast and
-        reliable way to download YouTube videos. With our user-friendly
+        YouTube’s download restrictions. We bridge the gap by offering a fast
+        and reliable way to download YouTube videos. With our user-friendly
         interface, accessing your favorite content has never been easier.
       </Text>
 
@@ -29,44 +52,28 @@ const PlatformSupportSection = () => {
       </Text>
 
       <Flex justify="center" gap={12} mb={10} flexWrap="wrap">
-        <Image src="/windows.svg" alt="Windows" boxSize={{base:'124px',md:'150px'}} />
-        <Image src="/apple.svg" alt="Apple" boxSize={{base:'124px',md:'150px'}} />
-        <Image src="/android.svg" alt="Android" boxSize={{base:'124px',md:'150px'}} />
-        <Image src="/linux.svg" alt="Linux" boxSize={{base:'124px',md:'150px'}} />
+        {supportedPlatforms.map((platform) => (
+          <Image
+            key={platform.alt}
+            src={platform.src}
+            alt={platform.alt}
+            boxSize={{ base: "124px", md: "150px" }}
+          />
+        ))}
       </Flex>
 
       <VStack
-        textAlign={"left"}
         spacing={4}
         mx="auto"
         color="black"
-        fontSize={"17px"}
+        fontSize="17px"
+        textAlign="left"
+        align="start"
       >
         <UnorderedList spacing={3}>
-          <ListItem>
-            Experience the best YouTube video downloading with our top-rated
-            tool – completely free.
-          </ListItem>
-          <ListItem>
-            Download content in your preferred quality: from MP4 to MP3,
-            standard to Full HD resolution.
-          </ListItem>
-          <ListItem>
-            Perfect compatibility across all devices – grab your favorite videos
-            on desktop or mobile.
-          </ListItem>
-          <ListItem>
-            Convert YouTube videos with just a few simple clicks using our
-            streamlined platform.
-          </ListItem>
-          <ListItem>
-            Get lightning-fast downloads and unlimited video access without
-            spending a dime.
-          </ListItem>
-          <ListItem>
-            Master YouTube downloading with our comprehensive guide and expert
-            tips.
-          </ListItem>
+          {features.map((feature, index) => (
+            <ListItem key={index}>{feature}</ListItem>
+          ))}
         </UnorderedList>
       </VStack>
     </Box>

@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import {
   VStack,
@@ -22,18 +23,18 @@ const VideoConverter = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   const handleSearch = () => {
-    if (!url) {
-      alert("Please Enter URL or type your keyword");
+    if (!url.trim()) {
+      alert("Please enter a YouTube URL or search term.");
       return;
     }
 
-    const youtubeRegex = /(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/|\/shorts\/)/;
-    const match = url.split(youtubeRegex);
+    const videoIdMatch = url.match(
+      /(?:v=|\/embed\/|youtu\.be\/|\/shorts\/)([a-zA-Z0-9_-]{11})/
+    );
 
-    if (match[2] && match[2].length > 10) {
-      const finalUrl = `https://www.youtube.com/watch?v=${
-        match[2].split(/[^0-9a-z_\-]/i)[0]
-      }`;
+    if (videoIdMatch && videoIdMatch[1]) {
+      const videoId = videoIdMatch[1];
+      const finalUrl = `https://www.youtube.com/watch?v=${videoId}`;
       setUrl(finalUrl);
       setIframeSrc(
         `https://loader.to/api/card2/?url=${finalUrl}&adUrl=https://myAdurl.com`
@@ -53,13 +54,13 @@ const VideoConverter = () => {
   return (
     <Box p={{ base: "40px 20px", md: "60px 30px 80px" }}>
       <Text
-        fontSize={{base:'24px',md:'30px'}}
+        fontSize={{ base: "24px", md: "30px" }}
         fontWeight="500"
         textAlign="center"
         color="white"
         mb={6}
       >
-      YouTube Video Downloader
+        YouTube Video Downloader
       </Text>
 
       <Flex justify="center">
@@ -69,10 +70,10 @@ const VideoConverter = () => {
           px={{ base: "2px", md: "8px" }}
           w={{ base: "95%", md: "65%" }}
           bg="white"
-        
         >
           <InputGroup maxW="700px" w="100%" size="md">
             <Input
+              aria-label="YouTube video URL"
               placeholder="Paste your video link here"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
@@ -86,6 +87,7 @@ const VideoConverter = () => {
             />
             <InputRightElement width={{ base: "3rem", md: "8.5rem" }} h="100%">
               <Button
+                aria-label={isMobile ? "Download video" : undefined}
                 onClick={handleSearch}
                 h="100%"
                 w="100%"
@@ -107,7 +109,19 @@ const VideoConverter = () => {
         By using our service you are accepting our Terms of use.
       </Text>
 
-      <IframeResizer src={iframeSrc} />
+      {iframeSrc && <IframeResizer src={iframeSrc} />}
+
+      {downloadUrl && (
+        <Box mt={8} textAlign="center">
+          <iframe
+            src={downloadUrl}
+            width="100%"
+            height="80"
+            style={{ border: "none" }}
+            title="Download Options"
+          />
+        </Box>
+      )}
     </Box>
   );
 };
