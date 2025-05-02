@@ -66,8 +66,9 @@ export default function Header() {
                 as={NextLink}
                 href="https://blockchain-silk-delta.vercel.app/"
                 isExternal
-                display="flex"
+               
                 alignItems="center"
+                 display="flex"
                 _hover={{ textDecoration: "none" }}
               >
                 <Image
@@ -77,7 +78,7 @@ export default function Header() {
                   boxSize="30px"
                   mr={2}
                 />
-                <Text fontWeight="bold" fontSize="lg">
+                <Text fontWeight="bold" fontSize="lg" color='white'>
                   ssyoutube
                 </Text>
               </Link>
