@@ -13,9 +13,12 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-} from "@chakra-ui/react";
+  Image,
+  Text, // ✅ Add this line
+} from "@chakra-ui/react"; // ✅ Make sure it's from Chakra
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
+import NextLink from "next/link"; // ✅ Needed for external Next.js links
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
