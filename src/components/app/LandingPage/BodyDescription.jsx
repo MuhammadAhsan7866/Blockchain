@@ -8,11 +8,15 @@ import {
   Image,
   UnorderedList,
   ListItem,
+  Heading,
 } from "@chakra-ui/react";
 
 const PlatformSupportSection = () => {
   return (
     <Box py={10} maxW="1240px" mx="auto" textAlign="center" px={{base:'25px',md:'0px'}}>
+      <Heading as="h1" size="xl" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
+        SSYouTube - Your Ultimate Video Downloading Solution
+      </Heading>
       <Text fontSize="lg" color="gray.600" mb={6}>
         SSYouTube is your go-to online video downloader, crafted to bypass
         YouTubes download restrictions. We bridge the gap by offering a fast and

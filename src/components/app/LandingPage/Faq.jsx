@@ -43,6 +43,9 @@ import {
   const FAQAccordion = () => {
     return (
       <Box py={10} px={6} maxW={'1440px'} margin={'auto'}>
+        <Heading as="h1" size="xl" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
+          Frequently Asked Questions About SSYouTube
+        </Heading>
         <Heading textAlign="center" mb={8}>
           FAQ
         </Heading>

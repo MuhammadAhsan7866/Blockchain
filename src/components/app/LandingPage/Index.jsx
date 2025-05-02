@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, Container } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container, Heading } from "@chakra-ui/react";
 import Script from "next/script";
 import VideoConverter from "./VideoConterter";
 import BodySection from "./BodyDescription";
@@ -33,6 +33,9 @@ export default function Home() {
       />
       <Box bg={"#08003A"}>
         <Container maxW="1100px" p={"157px 0px 50px"}>
+          <Heading as="h1" size="xl" color="white" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
+            SsYouTube - Free YouTube Video Downloader 2025
+          </Heading>
           <VideoConverter />
         </Container>
       </Box>

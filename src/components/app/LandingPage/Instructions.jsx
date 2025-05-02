@@ -9,12 +9,16 @@ import {
   UnorderedList,
   ListItem,
   Link,
+  Heading,
 } from "@chakra-ui/react";
 
 const YouTubeDownloadGuide = () => {
   return (
     <Box py={10} maxW="1240px" mx="auto" px={{base:'25px',md:'0px'}}>
       {/* Header */}
+      <Heading as="h1" size="xl" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
+        Download YouTube Videos: Your Complete Guide
+      </Heading>
       <Text fontSize={{base:'26px',md:'40px'}} fontWeight="500" textAlign="center" mb={8}>
         Download YouTube Videos: Your Complete Guide
       </Text>
