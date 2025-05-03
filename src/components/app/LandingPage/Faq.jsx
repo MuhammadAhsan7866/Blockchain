@@ -15,28 +15,28 @@ import {
     {
       question: "What is SSYouTube and What Does It Do?",
       answer:
-        "SSYouTube is a tool that allows you to download YouTube videos easily by modifying the video URL or using their site.",
+        "SSYouTube is a free online YouTube video downloader that allows you to download videos in multiple formats and resolutions. Enjoy fast downloads, high-quality video and audio, and convenient offline viewing.",
     },
     {
       question: "How Do I Download YouTube Videos with SSYouTube?",
       answer:
-        "Simply add 'ss' to the YouTube URL before 'youtube.com' to initiate the download page.",
+        "Copy the YouTube video URL and paste it into the search bar on the SSYouTube website. Select your preferred format and resolution, and click download. It’s that simple!",
     },
     {
       question: "Which Video Formats Does SSYouTube Support?",
       answer:
-        "SSYouTube supports MP4, WebM, 3GP, and other common formats depending on the video availability.",
+        "SSYouTube supports various video and audio formats, including MP4, AVI, FLV, MOV, WMV, and more. You can also select different resolutions, such as 720p or 1080p.",
     },
     {
       question:
         "Can I Download YouTube Playlists and Channels with SSYouTube?",
       answer:
-        "Currently, SSYouTube supports downloading individual videos. Playlist and channel downloading may not be supported.",
+        "Yes, you can download entire YouTube playlists and channels using SSYouTube. Copy the playlist or channel URL, paste it into the SSYouTube search bar, select the videos you want, and start your download.",
     },
     {
       question: "Is SSYouTube Safe?",
       answer:
-        "Yes, SSYouTube is safe to use as long as you avoid clicking on any misleading ads or pop-ups.",
+        "Yes, SSYouTube is a secure platform. We prioritize user privacy and do not store any personal information. The site is regularly updated to protect against viruses and malware.",
     },
   ];
   

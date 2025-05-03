@@ -5,6 +5,7 @@ import ScrollButton from '../src/components/core/ScrollButton'
 import "@fontsource/rajdhani"
 import { mynewtheme } from '../src/theme'
 
+
 function Marketplace({ Component, pageProps }) {
   return (
     <ChakraProvider resetCSS theme={mynewtheme}>

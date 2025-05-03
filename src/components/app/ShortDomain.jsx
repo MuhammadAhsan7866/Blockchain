@@ -26,23 +26,21 @@ import {
             <Text color="black" fontSize='20px' fontWeight={'500'}>Find Your Video</Text>
             <Image src="/downloader_how.svg" alt="Step 1" />
             <Text textAlign="center" maxW="360px" fontSize={'20px'}>
-              Get your favorite YouTube videos downloaded with these
-              straightforward instructions:
+            First, find the YouTube video you want to download and copy its URL from the address bar.
             </Text>
           </VStack>
           <VStack spacing={4}>
           <Text color="black" fontSize='20px' fontWeight={'500'}>Find Your Video</Text>
             <Image src="/downloader_how.svg" alt="Step 2" />
             <Text textAlign="center" maxW="360px"  fontSize={'20px'}>
-              Find the video you want on YouTube and grab the URL from your
-              browser.
+            Add ss before the video URL. This prefix is how you initiate the youtube download process.
             </Text>
           </VStack>
           <VStack spacing={4}>
           <Text color="black" fontSize='20px' fontWeight={'500'}>Find Your Video</Text>
             <Image src="/downloader_how.svg" alt="Step 3" />
             <Text textAlign="center" maxW="360px"  fontSize={'20px'}>
-              Insert the YouTube video link into our download box above.
+            Hit Enter You will be taken to a new page where your youtube video download will start automatically.
             </Text>
           </VStack>
         </Flex>

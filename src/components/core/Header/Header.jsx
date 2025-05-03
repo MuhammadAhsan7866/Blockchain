@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <Box
       sx={{
-        backgroundColor: isScrolled ? "#08003A" : "transparent",
+        backgroundColor: isScrolled ? "#08003A" : "#08003A",
         backdropFilter: "blur(10px)",
         boxShadow: isScrolled ? "0 0 30px rgba(135, 80, 247, 0.2)" : "none",
         position: "fixed",
@@ -62,26 +62,20 @@ export default function Header() {
         <Box w={{ base: "100%", md: "25%" }}>
           <Link to="banner" smooth={true} duration={500}>
             <Flex align="center">
-              <Link
-                as={NextLink}
-                href="https://blockchain-silk-delta.vercel.app/"
-                isExternal
-               
-                alignItems="center"
-                 display="flex"
-                _hover={{ textDecoration: "none" }}
-              >
-                <Image
+              
+              <Image
                   src="/logo.svg"
                   alt="ssyoutube"
                   loading="lazy"
                   boxSize="30px"
                   mr={2}
+                  href="https://blockchain-silk-delta.vercel.app/"
                 />
-                <Text fontWeight="bold" fontSize="lg" color='white'>
+                <Text fontWeight="bold" fontSize="lg" color='white'
+                href="https://blockchain-silk-delta.vercel.app/"
+                >
                   ssyoutube
                 </Text>
-              </Link>
             </Flex>
           </Link>
         </Box>

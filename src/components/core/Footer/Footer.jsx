@@ -29,8 +29,8 @@ const Footer = () => {
         {/* Section 3 */}
         <VStack align="flex-start" spacing={2}>
           <Text fontWeight="bold">About us</Text>
-          <Link color="green.400" href="#">Privacy Policy</Link>
-          <Link color="green.400" href="#">Terms of Service</Link>
+          <Link color="green.400" href="/Policy">Privacy Policy</Link>
+          <Link color="green.400" href="/terms-of-service">Terms of Service</Link>
           <Link color="green.400" href="#">Contact</Link>
           <Link color="green.400" href="#">API</Link>
         </VStack>

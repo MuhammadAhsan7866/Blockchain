@@ -11,6 +11,7 @@ import {
   InputGroup,
   InputRightElement,
   useBreakpointValue,
+  Img,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import IframeResizer from "./IframeResizer";
@@ -105,9 +106,25 @@ const VideoConverter = () => {
         </Box>
       </Flex>
 
-      <Text mt={4} textAlign="center" color="white">
-        By using our service you are accepting our Terms of use.
-      </Text>
+      <Flex
+        bg="#0c003b"
+        color="white"
+        align="center"
+        justify="center"
+        py={2}
+        px={4}
+        fontSize="20px"
+        mt={'18px'}
+      >
+        <Text mr={1}>Scanned by</Text>
+        <Img
+          src="/norton.svg"
+          alt="Norton Safe Web"
+          boxSize="16px"
+          mx={1}
+        />
+        <Text ml={1}>Norton™ Safe Web</Text>
+      </Flex>
 
       {iframeSrc && <IframeResizer src={iframeSrc} />}
 
