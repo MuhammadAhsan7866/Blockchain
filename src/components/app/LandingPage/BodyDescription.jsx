@@ -42,7 +42,7 @@ const PlatformSupportSection = () => {
 
       <Text fontSize="lg" color="gray.600" mb={6}>
         SSYouTube is your go-to online video downloader, crafted to bypass
-        YouTube's download restrictions. We bridge the gap by offering a fast
+        YouTube&rsquo;s download restrictions. We bridge the gap by offering a fast
         and reliable way to download YouTube videos. With our user-friendly
         interface, accessing your favorite content has never been easier.
       </Text>

@@ -36,7 +36,7 @@ const policySections = [
     title: "4. Children's protection",
     content: [
       <>
-        If we learn that we've collected personal data from a child, we will
+        If we learn that we&rsquo;ve collected personal data from a child, we will
         take steps to delete it. Parents or legal guardians can request removal
         by contacting us at{" "}
         <Link href="mailto:contact@Seyoutube.com" color="blue.500">
@@ -44,7 +44,7 @@ const policySections = [
         </Link>
         .
       </>,
-    ],
+    ].map((jsx, i) => ({ jsx, key: `child-protection-${i}` })),
   },
   {
     title: "5. Parties we may share your data with",
@@ -80,13 +80,15 @@ const policySections = [
         </Link>
         .
       </>,
-      <Text fontWeight="bold">Effective July 1, 2021</Text>,
-    ],
+      <Text fontWeight="bold" key="effective-date">
+        Effective July 1, 2021
+      </Text>,
+    ].map((jsx, i) => ({ jsx, key: `contact-${i}` })),
   },
 ];
 
 const PrivacyPolicy = () => (
-  <Box maxW="1240px" mx="auto" p={6} pt={'120px'}>
+  <Box maxW="1240px" mx="auto" p={6} pt={"120px"}>
     <VStack spacing={6} align="stretch">
       <Heading as="h1" size="xl" mb={4}>
         PRIVACY POLICY
@@ -104,11 +106,17 @@ const PrivacyPolicy = () => (
             {section.title}
           </Heading>
           {section.content &&
-            section.content.map((para, idx) => (
-              <Text key={idx} mb={3}>
-                {para}
-              </Text>
-            ))}
+            section.content.map((para, idx) =>
+              typeof para === "string" ? (
+                <Text key={idx} mb={3}>
+                  {para}
+                </Text>
+              ) : (
+                <Text key={para.key} mb={3}>
+                  {para.jsx}
+                </Text>
+              )
+            )}
           {section.list && (
             <UnorderedList spacing={3}>
               {section.list.map((item, idx) => (

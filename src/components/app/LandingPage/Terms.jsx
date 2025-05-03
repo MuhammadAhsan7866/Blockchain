@@ -17,10 +17,9 @@ const TermsOfUse = () => {
           Terms of Use
         </Heading>
 
-        <Text mb="15px"  >
-          Please review these terms and conditions of use carefully before using our website and services. This document states the terms and conditions (“Terms”) upon which ssyoutube.com (“we” or “us”) will provide service to you on its website, applications and related services (collectively, the “Service”). As used in this document, the terms “you” or “your” refers to you, any entity you represent, your or its representatives, successors, assigns and affiliates, and any of your or their devices.
-        </Text>
-
+        <Text mb="15px">
+  Please review these terms and conditions of use carefully before using our website and services. This document states the terms and conditions (&ldquo;Terms&rdquo;) upon which ssyoutube.com (&ldquo;we&rdquo; or &ldquo;us&rdquo;) will provide service to you on its website, applications and related services (collectively, the &ldquo;Service&rdquo;). As used in this document, the terms &ldquo;you&rdquo; or &ldquo;your&rdquo; refers to you, any entity you represent, your or its representatives, successors, assigns and affiliates, and any of your or their devices.
+</Text>
         <Text mb="15px">
           By visiting, accessing, using, downloading, copying, installing and/or joining (collectively “using”) the Service, you express your understanding and acceptance of these Terms...
         </Text>
