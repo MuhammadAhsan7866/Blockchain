@@ -18,15 +18,16 @@ const TermsOfUse = () => {
         </Heading>
 
         <Text mb="15px">
-  Please review these terms and conditions of use carefully before using our website and services. This document states the terms and conditions (&ldquo;Terms&rdquo;) upon which ssyoutube.com (&ldquo;we&rdquo; or &ldquo;us&rdquo;) will provide service to you on its website, applications and related services (collectively, the &ldquo;Service&rdquo;). As used in this document, the terms &ldquo;you&rdquo; or &ldquo;your&rdquo; refers to you, any entity you represent, your or its representatives, successors, assigns and affiliates, and any of your or their devices.
-</Text>
+          Please review these terms and conditions of use carefully before using our website and services. This document states the terms and conditions (&ldquo;Terms&rdquo;) upon which ssyoutube.com (&ldquo;we&rdquo; or &ldquo;us&rdquo;) will provide service to you on its website, applications and related services (collectively, the &ldquo;Service&rdquo;). As used in this document, the terms &ldquo;you&rdquo; or &ldquo;your&rdquo; refers to you, any entity you represent, your or its representatives, successors, assigns and affiliates, and any of your or their devices.
+        </Text>
+
         <Text mb="15px">
-          By visiting, accessing, using, downloading, copying, installing and/or joining (collectively “using”) the Service, you express your understanding and acceptance of these Terms...
+          By visiting, accessing, using, downloading, copying, installing and/or joining (collectively &ldquo;using&rdquo;) the Service, you express your understanding and acceptance of these Terms...
         </Text>
 
         {/* SECTION 1 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             1. General Terms
           </Heading>
           <Text mb="15px">
@@ -39,7 +40,7 @@ const TermsOfUse = () => {
 
         {/* SECTION 2 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             2. Intellectual Property
           </Heading>
           <Text mb="15px">
@@ -49,7 +50,7 @@ const TermsOfUse = () => {
 
         {/* SECTION 3 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             3. Your Representations
           </Heading>
           <Text mb="15px">
@@ -82,17 +83,17 @@ const TermsOfUse = () => {
 
         {/* SECTION 4 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             4. Third Party Links
           </Heading>
           <Text mb="15px">
-            The Service may contain links to third party sites. We don’t assume any responsibility for them.
+            The Service may contain links to third party sites. We don&apos;t assume any responsibility for them.
           </Text>
         </Box>
 
         {/* SECTION 5 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             5. Use of the Service
           </Heading>
           <Text mb="15px">
@@ -107,7 +108,7 @@ const TermsOfUse = () => {
 
         {/* SECTION 6 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             6. Copyright Claims
           </Heading>
           <Text mb="15px">
@@ -117,17 +118,17 @@ const TermsOfUse = () => {
 
         {/* SECTION 7 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             7. Limitation of Liability and No Warranty
           </Heading>
           <Text mb="15px">
-            The Service is provided "as is". We are not liable for any damages or losses.
+            The Service is provided &quot;as is&quot;. We are not liable for any damages or losses.
           </Text>
         </Box>
 
         {/* SECTION 8 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             8. Indemnity
           </Heading>
           <Text mb="15px">
@@ -137,7 +138,7 @@ const TermsOfUse = () => {
 
         {/* SECTION 9 */}
         <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={'.5rem'}>
+          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
             9. Miscellaneous
           </Heading>
           <Text mb="15px">
