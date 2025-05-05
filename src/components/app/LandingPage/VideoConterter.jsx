@@ -19,7 +19,6 @@ import IframeResizer from "./IframeResizer";
 const VideoConverter = () => {
   const [url, setUrl] = useState("");
   const [iframeSrc, setIframeSrc] = useState("");
-  const [downloadUrl, setDownloadUrl] = useState("");
 
   const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -40,15 +39,9 @@ const VideoConverter = () => {
       setIframeSrc(
         `https://loader.to/api/card2/?url=${finalUrl}&adUrl=https://myAdurl.com`
       );
-      setDownloadUrl(
-        `https://loader.to/api/button/?url=${finalUrl}&format=mp4`
-      );
     } else {
       const encodedQuery = encodeURIComponent(url);
       setIframeSrc(`https://apiyoutube.cc/?q=${encodedQuery}&color=1c1c1c`);
-      setDownloadUrl(
-        `https://loader.to/api/button/?url=${encodedQuery}&format=mp4`
-      );
     }
   };
 
@@ -114,31 +107,14 @@ const VideoConverter = () => {
         py={2}
         px={4}
         fontSize="20px"
-        mt={'18px'}
+        mt={"18px"}
       >
         <Text mr={1}>Scanned by</Text>
-        <Img
-          src="/norton.svg"
-          alt="Norton Safe Web"
-          boxSize="16px"
-          mx={1}
-        />
+        <Img src="/norton.svg" alt="Norton Safe Web" boxSize="16px" mx={1} />
         <Text ml={1}>Norton™ Safe Web</Text>
       </Flex>
 
       {iframeSrc && <IframeResizer src={iframeSrc} />}
-
-      {downloadUrl && (
-        <Box mt={8} textAlign="center">
-          <iframe
-            src={downloadUrl}
-            width="100%"
-            height="80"
-            style={{ border: "none" }}
-            title="Download Options"
-          />
-        </Box>
-      )}
     </Box>
   );
 };

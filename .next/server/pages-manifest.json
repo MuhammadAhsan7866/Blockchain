@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/Policy": "pages/Policy.js",
-  "/terms-of-service": "pages/terms-of-service.js"
+  "/youtube-to-mp3-converter": "pages/youtube-to-mp3-converter.js",
+  "/youtube-to-mp4-converter": "pages/youtube-to-mp4-converter.js"
 }

@@ -7,18 +7,17 @@ import {
   Button,
   useDisclosure,
   Stack,
-  Heading,
   Drawer,
   DrawerBody,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   Image,
-  Text, // ✅ Add this line
-} from "@chakra-ui/react"; // ✅ Make sure it's from Chakra
+  Text,
+} from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Link } from "react-scroll";
-import NextLink from "next/link"; // ✅ Needed for external Next.js links
+import { Link as ScrollLink } from "react-scroll";
+import NextLink from "next/link";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,9 +33,9 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: "Youtube Downloader", to: "about" },
-    { label: "Convert YouTube to MP3", to: "services" },
-    { label: "Youtube to MP4 Converter", to: "project" },
+    { label: "Youtube Downloader", type: "route", to: "/youtube-downloader" },
+    { label: "Convert YouTube to MP3", type: "route", to: "/youtube-to-mp3-converter" },
+    { label: "Youtube to MP4 Converter", type: "route", to: "/youtube-to-mp4-converter" },
   ];
 
   return (
@@ -60,40 +59,48 @@ export default function Header() {
         p={"12px"}
       >
         <Box w={{ base: "100%", md: "25%" }}>
-          <Link to="banner" smooth={true} duration={500}>
-            <Flex align="center">
-              
+          <ScrollLink to="banner" smooth={true} duration={500}>
+            <Flex align="center" cursor="pointer">
               <Image
-                  src="/logo.svg"
-                  alt="ssyoutube"
-                  loading="lazy"
-                  boxSize="30px"
-                  mr={2}
-                  href="https://blockchain-silk-delta.vercel.app/"
-                />
-                <Text fontWeight="bold" fontSize="lg" color='white'
-                href="https://blockchain-silk-delta.vercel.app/"
-                >
-                  ssyoutube
-                </Text>
+                src="/logo.svg"
+                alt="ssyoutube"
+                loading="lazy"
+                boxSize="30px"
+                mr={2}
+              />
+              <Text fontWeight="bold" fontSize="lg" color="white">
+                ssyoutube
+              </Text>
             </Flex>
-          </Link>
+          </ScrollLink>
         </Box>
 
         <Flex alignItems="center" display={{ base: "none", md: "flex" }}>
           <HStack as="nav" spacing={4}>
-            {navItems.map((item) => (
-              <Link key={item.to} to={item.to} smooth={true} duration={500}>
-                <Button
-                  color="white"
-                  bg={"transparent"}
-                  _hover={{ color: "gray.400" }}
-                >
-                  {item.label}
-                </Button>
-              </Link>
-            ))}
-            <Link to="contact" smooth={true} duration={500}>
+            {navItems.map((item) =>
+              item.type === "scroll" ? (
+                <ScrollLink key={item.to} to={item.to} smooth={true} duration={500}>
+                  <Button
+                    color="white"
+                    bg="transparent"
+                    _hover={{ color: "gray.400" }}
+                  >
+                    {item.label}
+                  </Button>
+                </ScrollLink>
+              ) : (
+                <NextLink key={item.to} href={item.to} passHref>
+                  <Button
+                    color="white"
+                    bg="transparent"
+                    _hover={{ color: "gray.400" }}
+                  >
+                    {item.label}
+                  </Button>
+                </NextLink>
+              )
+            )}
+            <ScrollLink to="contact" smooth={true} duration={500}>
               <Button
                 w={"100%"}
                 sx={{
@@ -102,7 +109,6 @@ export default function Header() {
                   fontSize: "14px",
                   padding: "0 30px",
                   height: "45px",
-
                   transition: "background 0.3s ease",
                   _hover: {
                     background: "#DC3546",
@@ -111,7 +117,7 @@ export default function Header() {
               >
                 Let&apos;s Talk
               </Button>
-            </Link>
+            </ScrollLink>
           </HStack>
         </Flex>
 
@@ -134,19 +140,39 @@ export default function Header() {
           <DrawerCloseButton color="white" />
           <DrawerBody>
             <Stack as="nav" spacing={4} alignItems="center" py={6}>
-              {navItems.map((item) => (
-                <Link key={item.to} to={item.to} smooth={true} duration={500}>
-                  <Button
-                    color="white"
-                    bg={"transparent"}
-                    _hover={{ color: "gray.400" }}
-                    fontSize="lg"
+              {navItems.map((item) =>
+                item.type === "scroll" ? (
+                  <ScrollLink
+                    key={item.to}
+                    to={item.to}
+                    smooth={true}
+                    duration={500}
+                    onClick={onClose}
                   >
-                    {item.label}
-                  </Button>
-                </Link>
-              ))}
-              <Link to="contact" smooth={true} duration={500}>
+                    <Button
+                      color="white"
+                      bg="transparent"
+                      _hover={{ color: "gray.400" }}
+                      fontSize="lg"
+                    >
+                      {item.label}
+                    </Button>
+                  </ScrollLink>
+                ) : (
+                  <NextLink key={item.to} href={item.to} passHref>
+                    <Button
+                      color="white"
+                      bg="transparent"
+                      _hover={{ color: "gray.400" }}
+                      fontSize="lg"
+                      onClick={onClose}
+                    >
+                      {item.label}
+                    </Button>
+                  </NextLink>
+                )
+              )}
+              <ScrollLink to="contact" smooth={true} duration={500} onClick={onClose}>
                 <Button
                   sx={{
                     background: "linear-gradient(140deg, #FF6E00, #A629F2)",
@@ -163,7 +189,7 @@ export default function Header() {
                 >
                   Let&apos;s Talk
                 </Button>
-              </Link>
+              </ScrollLink>
             </Stack>
           </DrawerBody>
         </DrawerContent>
