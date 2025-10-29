@@ -9,8 +9,8 @@ const DownloadFromOtherWebsites = ({
   exampleLinkUrl,
 }) => {
   return (
-    <Box maxW="1140px" margin="auto">
-      <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
+    <Box maxW="100%" margin="auto">
+      <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="left">
         {title}
       </Text>
 

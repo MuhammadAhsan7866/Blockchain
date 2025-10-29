@@ -36,6 +36,8 @@ export default function Header() {
     { label: "Youtube Downloader", type: "route", to: "/youtube-downloader" },
     { label: "Convert YouTube to MP3", type: "route", to: "/youtube-to-mp3-converter" },
     { label: "Youtube to MP4 Converter", type: "route", to: "/youtube-to-mp4-converter" },
+    { label: "Instagram Downloader", type: "route", to: "/instagram" },
+    { label: "Facebook Downloader", type: "route", to: "/facebook" },
   ];
 
   return (
@@ -54,7 +56,7 @@ export default function Header() {
         h={"95px"}
         alignItems="center"
         justifyContent="space-between"
-        maxW={"1340px"}
+        maxW={"1440px"}
         m={"auto"}
         p={"12px"}
       >

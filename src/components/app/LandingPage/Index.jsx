@@ -42,17 +42,7 @@ export default function Home() {
 
       <BodySection />
       <Info />
-      <Box bg="#08003A" color="white" py={"50px"} px={6}>
-        <DownloadFromOtherWebsites
-          title="Download Videos From Other Websites"
-          paragraphs={[
-            "Want to download YouTube shorts from sites other than YouTube? The SSYouTube downloader supports video downloads from 99% of websites! Just add sfrom.net/ or savefrom.net/ before the website URL and press Enter.",
-            "You will get a list of direct links to download all available videos from that website.",
-          ]}
-          exampleLinkText="sfrom.net/http://www.freethechildren.com/"
-          exampleLinkUrl="http://www.freethechildren.com/"
-        />
-      </Box>
+     
       <DomainInstruction />
       <FAQAccordion />
     </ChakraProvider>
