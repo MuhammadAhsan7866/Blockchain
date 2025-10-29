@@ -235,7 +235,7 @@ const FacebookDownloader = () => {
                     
                     {videoData.description && (
                       <Text fontSize="sm" color="#666" fontStyle="italic">
-                        "{videoData.description}"
+                        &quot;{videoData.description}&quot;
                       </Text>
                     )}
                     

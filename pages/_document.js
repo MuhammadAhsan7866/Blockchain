@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>SsYouTube | Online YouTube Video Downloader 2025 [100% Free]</title>
         <meta name="description" content="Ssyoutube Online Videos Downloader is a fast and secure solution that offers high quality (1080p, 2k, 4k) Ss youtube mp3 and mp4 converter сс ютуб savefrom ytmp3." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="youtube downloader, youtube mp3, youtube mp4, video downloader, ssyoutube, savefrom, ytmp3" />

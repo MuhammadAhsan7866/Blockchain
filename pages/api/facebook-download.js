@@ -20,35 +20,33 @@ async function fetchFacebookMetadata(url) {
     };
 
     /* 
-    // Uncomment this section for actual Facebook metadata fetching
-    const metadataUrl = `https://www.facebook.com/video.php?v=${videoId}`;
+    Uncomment this section for actual Facebook metadata fetching
     
+    const metadataUrl = https://www.facebook.com/video.php?v= + videoId;
     const response = await fetch(metadataUrl, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
       }
     });
-
     if (!response.ok) return null;
-
     const html = await response.text();
     
-    // Extract metadata from HTML (this is a simplified approach)
-    // Facebook's structure is more complex, so we'll use basic extraction
+    Extract metadata from HTML
+    Facebook structure is more complex
     
-    // Try to extract title from meta tags
-    const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
-    const title = titleMatch ? titleMatch[1].replace(/^\s*Facebook\s*-\s*/, '') : null;
+    Try to extract title from meta tags
+    const titleMatch = html.match(/title/i);
+    const title = titleMatch ? titleMatch[1].replace(/Facebook/, '') : null;
     
-    // Try to extract description from meta tags
-    const descMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i);
+    Try to extract description from meta tags
+    const descMatch = html.match(/meta/);
     const description = descMatch ? descMatch[1] : null;
 
     return {
-      title: title || `Facebook Video ${videoId}`,
+      title: title,
       description: description,
-      uploadDate: null, // Facebook doesn't expose this easily
-      likes: null // Facebook doesn't expose this easily without API access
+      uploadDate: null,
+      likes: null
     };
     */
   } catch (error) {
