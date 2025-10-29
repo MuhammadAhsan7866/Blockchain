@@ -20,7 +20,6 @@ import {
   Icon,
   Divider,
 } from "@chakra-ui/react";
-import HoverVideoPlayer from "react-hover-video-player";
 import { FaHeart, FaCalendarAlt, FaUser } from "react-icons/fa";
 
 const InstagramDownloader = () => {
@@ -276,57 +275,19 @@ const InstagramDownloader = () => {
                     maxW="400px"
                     mx="auto"
                   >
-                    {videoData.thumbnail_url ? (
-                      <HoverVideoPlayer
-                        videoSrc={videoData.video_url}
-                        pausedOverlay={
-                          <Image
-                            src={videoData.thumbnail_url}
-                            alt="Instagram Reel Thumbnail"
-                            w="100%"
-                            h="auto"
-                            objectFit="cover"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              // Show fallback when thumbnail fails
-                              const fallbackDiv = e.target.nextSibling;
-                              if (fallbackDiv) {
-                                fallbackDiv.style.display = 'flex';
-                              }
-                            }}
-                          />
-                        }
-                        loadingOverlay={
-                          <Box
-                            bg="#f0f0f0"
-                            w="100%"
-                            h="200px"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                          >
-                            <Spinner size="lg" color="#d32f2f" />
-                          </Box>
-                        }
+                    <Box position="relative">
+                      <video
+                        src={videoData.video_url}
+                        controls
+                        poster={videoData.thumbnail_url}
                         style={{
                           width: '100%',
                           height: 'auto',
                           borderRadius: '8px',
                         }}
+                        preload="metadata"
                       />
-                    ) : (
-                      // Fallback: Show video directly without thumbnail
-                      <Box position="relative">
-                        <video
-                          src={videoData.video_url}
-                          controls
-                          style={{
-                            width: '100%',
-                            height: 'auto',
-                            borderRadius: '8px',
-                          }}
-                          preload="metadata"
-                        />
+                      {!videoData.thumbnail_url && (
                         <Box
                           position="absolute"
                           top="10px"
@@ -340,8 +301,8 @@ const InstagramDownloader = () => {
                         >
                           Preview
                         </Box>
-                      </Box>
-                    )}
+                      )}
+                    </Box>
                   </Box>
                 </Box>
                 
