@@ -3,6 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/instagram": "pages/instagram.js",
-  "/youtube-downloader": "pages/youtube-downloader.js",
-  "/youtube-to-mp3-converter": "pages/youtube-to-mp3-converter.js"
+  "/youtube-to-mp3-converter": "pages/youtube-to-mp3-converter.js",
+  "/facebook": "pages/facebook.js",
+  "/api/facebook-download": "pages/api/facebook-download.js"
 }

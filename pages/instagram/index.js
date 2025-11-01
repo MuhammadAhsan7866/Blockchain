@@ -17,8 +17,12 @@ import {
   useToast,
   HStack,
   Icon,
+  InputGroup,
+  InputRightElement,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { FaHeart, FaCalendarAlt } from "react-icons/fa";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import DownloadFromOtherWebsites from "../../src/components/app/LandingPage/BannerInstructions";
 
 const InstagramDownloader = () => {
@@ -27,6 +31,7 @@ const InstagramDownloader = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const toast = useToast();
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   // Utility function to format date
   const formatDate = (dateString) => {
@@ -162,55 +167,56 @@ const InstagramDownloader = () => {
             </Text>
 
             <VStack spacing={6} textAlign="center">
-              <Box w="100%" maxW="450px" mx="auto">
-                <form onSubmit={handleSubmit}>
-                  <Box position="relative">
-                    <Input
-                      type="text"
-                      placeholder="Paste Instagram Reel URL here"
-                      value={url}
-                      onChange={(e) => setUrl(e.target.value)}
-                      bg="white"
-                      color="#000"
-                      h="49px"
-                      px="15px"
-                      fontSize="16px"
-                      border="none"
-                      borderRadius="6px"
-                      _focus={{
-                        boxShadow: "0 0 0 1px #d32f2f",
-                      }}
-                      autoFocus
-                      autoComplete="off"
-                      inputMode="url"
-                      autoCapitalize="none"
-                    />
-                    <Button
-                      type="submit"
-                      position="absolute"
-                      top="5px"
-                      right="5px"
-                      h="39px"
-                      w="80px"
-                      bg="#d32f2f"
-                      color="white"
-                      border="none"
-                      borderRadius="4px"
-                      fontSize="14px"
-                      cursor="pointer"
-                      transition="all 0.2s"
-                      _hover={{
-                        bg: "#b71c1c",
-                        transform: "scale(0.96)",
-                      }}
-                      isLoading={loading}
-                      loadingText="..."
-                    >
-                      Download
-                    </Button>
-                  </Box>
-                </form>
-              </Box>
+              <Flex justify="center" w="100%">
+                <Box
+                  border="1px solid white"
+                  py={{ base: "2px", md: "5px" }}
+                  px={{ base: "2px", md: "8px" }}
+                  w={{ base: "95%", md: "65%" }}
+                  bg="white"
+                  maxW="700px"
+                >
+                  <form onSubmit={handleSubmit}>
+                    <InputGroup size="md">
+                      <Input
+                        type="text"
+                        placeholder="Paste Instagram Reel URL here"
+                        value={url}
+                        onChange={(e) => setUrl(e.target.value)}
+                        color="black"
+                        bg="transparent"
+                        border="none"
+                        borderRadius="0"
+                        h={{ base: "40px", md: "52px" }}
+                        _placeholder={{ color: "gray.500" }}
+                        _focusVisible={{ outline: "none", boxShadow: "none" }}
+                        autoFocus
+                        autoComplete="off"
+                        inputMode="url"
+                        autoCapitalize="none"
+                      />
+                      <InputRightElement width={{ base: "3rem", md: "8.5rem" }} h="100%">
+                        <Button
+                          type="submit"
+                          aria-label={isMobile ? "Download video" : undefined}
+                          h="100%"
+                          w="100%"
+                          p="0"
+                          borderLeftRadius="7px"
+                          bg="#DC3545"
+                          color="white"
+                          fontSize={{ base: "20px", md: "14px" }}
+                          _hover={{ bg: "#DC3546" }}
+                          isLoading={loading}
+                          loadingText="..."
+                        >
+                          {isMobile ? <ArrowForwardIcon /> : "Download"}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup>
+                  </form>
+                </Box>
+              </Flex>
 
               {error && (
                 <Alert status="error" maxW="500px" mx="auto">
