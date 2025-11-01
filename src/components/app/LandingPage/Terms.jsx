@@ -20,7 +20,7 @@ const TermsOfUse = () => {
         </Text>
 
         <Text mb={3} color="black">
-          Mp3juices fan made website, is not affiliated with the original Mp3juices and legal entity. We absolutely do not host any copyrighted or illegal content on MP3 Quack the Music Searching information. Our service only provides links to stream and search music information on 3rd party sites. MP3 Quack complies with the Digital Millennium Copyright Act ("DMCA") and any other applicable intellectual property laws. We will immediately withdraw links to copyrighted works upon receipt of properly submitted notices of copyright infringement. Our service is intended for searching the internet. Anyone requesting to remove any URL, search results, or play options can contact us at info@ss-youtube.cc
+          Mp3juices fan made website, is not affiliated with the original Mp3juices and legal entity. We absolutely do not host any copyrighted or illegal content on MP3 Quack the Music Searching information. Our service only provides links to stream and search music information on 3rd party sites. MP3 Quack complies with the Digital Millennium Copyright Act (&quot;DMCA&quot;) and any other applicable intellectual property laws. We will immediately withdraw links to copyrighted works upon receipt of properly submitted notices of copyright infringement. Our service is intended for searching the internet. Anyone requesting to remove any URL, search results, or play options can contact us at info@ss-youtube.cc
         </Text>
 
         <Text mb={3} color="black">
@@ -56,7 +56,7 @@ const TermsOfUse = () => {
         </Text>
 
         <Text mb={3} color="black">
-          We have found infringing material on your website which indeed is our music 'The Music' released on December 12th, 2011.
+          We have found infringing material on your website which indeed is our music &apos;The Music&apos; released on December 12th, 2011.
         </Text>
 
         <Text mb={3} color="black">

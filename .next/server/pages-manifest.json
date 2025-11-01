@@ -4,6 +4,5 @@
   "/_document": "pages/_document.js",
   "/faq": "pages/faq.js",
   "/facebook": "pages/facebook.js",
-  "/api/instagram-download": "pages/api/instagram-download.js",
   "/instagram": "pages/instagram.js"
 }
