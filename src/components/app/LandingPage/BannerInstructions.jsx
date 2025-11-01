@@ -10,13 +10,13 @@ const DownloadFromOtherWebsites = ({
 }) => {
   return (
     <Box maxW="100%" margin="auto">
-      <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="left">
+      <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
         {title}
       </Text>
 
       {paragraphs.length > 0 &&
         paragraphs.map((para, index) => (
-          <Text mb={4} key={index}>
+          <Text mb={4} key={index} w={'59%'} mx={'auto'}>
             {para}
           </Text>
         ))}
