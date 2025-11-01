@@ -236,14 +236,14 @@ const FacebookDownloader = () => {
                   mx="auto"
                   mt="30px"
                 >
-                  <Heading as="h3" size="md" color="#333" mb="15px">
+                  <Heading as="h3" size="md" color="white" mb="15px">
                     🎉 Download is Ready!
                   </Heading>
                   
                   {/* Video Metadata Section */}
                   <Box mb="20px" p="15px" bg="rgba(255,255,255,0.1)" borderRadius="8px">
                     <VStack spacing={3} align="start">
-                      <Heading as="h4" size="sm" color="#333">
+                      <Heading as="h4" size="sm" color="white">
                         {videoData.title}
                       </Heading>
                       
@@ -275,13 +275,13 @@ const FacebookDownloader = () => {
                     </VStack>
                   </Box>
                   
-                  <Text color="#555" mb="15px">
+                  <Text color="white" mb="15px">
                     Click the button below to download your video.
                   </Text>
                   
                   {/* Video Preview Section */}
                   <Box mb="20px">
-                    <Text color="#555" mb="10px" fontSize="14px" fontWeight="bold">
+                    <Text color="white" mb="10px" fontSize="14px" fontWeight="bold">
                       Video Preview:
                     </Text>
                     <Box
@@ -340,7 +340,7 @@ const FacebookDownloader = () => {
                   >
                     ⬇️ Download Video Now
                   </Button>
-                  <Text mt="15px" fontSize="14px" color="#666">
+                  <Text mt="15px" fontSize="14px" color="white">
                     Source:{" "}
                     <Button
                       as="a"

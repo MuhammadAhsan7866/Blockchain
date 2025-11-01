@@ -103,22 +103,7 @@ export default function Header() {
               )
             )}
             <ScrollLink to="contact" smooth={true} duration={500}>
-              <Button
-                w={"100%"}
-                sx={{
-                  background: "#DC3545",
-                  color: "white",
-                  fontSize: "14px",
-                  padding: "0 30px",
-                  height: "45px",
-                  transition: "background 0.3s ease",
-                  _hover: {
-                    background: "#DC3546",
-                  },
-                }}
-              >
-                Let&apos;s Talk
-              </Button>
+              
             </ScrollLink>
           </HStack>
         </Flex>

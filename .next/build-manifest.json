@@ -22,20 +22,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/facebook": [
+    "/faq": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/facebook.js"
+      "static/chunks/pages/faq.js"
     ],
     "/instagram": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/instagram.js"
-    ],
-    "/youtube-to-mp3-converter": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/youtube-to-mp3-converter.js"
     ]
   },
   "ampFirstPages": []

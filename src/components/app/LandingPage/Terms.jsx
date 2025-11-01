@@ -4,147 +4,84 @@ import {
   Box,
   Heading,
   Text,
-  UnorderedList,
-  ListItem,
   VStack,
 } from "@chakra-ui/react";
 
 const TermsOfUse = () => {
   return (
-    <Box maxW="1240px" mx="auto" px={6} pt="120px" pb="35px">
-      <VStack spacing={6} align="start">
-        <Heading as="h1" fontSize="35px" fontWeight="600">
-          Terms of Use
+    <Box maxW="1240px" mx="auto" px={6} pt="120px" pb="35px" bg="white">
+      <VStack spacing={4} align="start">
+        <Heading as="h1" fontSize="35px" fontWeight="600" color="black">
+          Term Of Service
         </Heading>
 
-        <Text mb="15px">
-          Please review these terms and conditions of use carefully before using our website and services. This document states the terms and conditions (&ldquo;Terms&rdquo;) upon which ssyoutube.com (&ldquo;we&rdquo; or &ldquo;us&rdquo;) will provide service to you on its website, applications and related services (collectively, the &ldquo;Service&rdquo;). As used in this document, the terms &ldquo;you&rdquo; or &ldquo;your&rdquo; refers to you, any entity you represent, your or its representatives, successors, assigns and affiliates, and any of your or their devices.
+        <Text fontSize="16px" fontWeight="bold" textTransform="uppercase" mb={4} color="black">
+          PLEASE READ THIS STATEMENT OF PRIVACY PRACTICES CAREFULLY BEFORE USING OUR SERVICE
         </Text>
 
-        <Text mb="15px">
-          By visiting, accessing, using, downloading, copying, installing and/or joining (collectively &ldquo;using&rdquo;) the Service, you express your understanding and acceptance of these Terms...
+        <Text mb={3} color="black">
+          Mp3juices fan made website, is not affiliated with the original Mp3juices and legal entity. We absolutely do not host any copyrighted or illegal content on MP3 Quack the Music Searching information. Our service only provides links to stream and search music information on 3rd party sites. MP3 Quack complies with the Digital Millennium Copyright Act ("DMCA") and any other applicable intellectual property laws. We will immediately withdraw links to copyrighted works upon receipt of properly submitted notices of copyright infringement. Our service is intended for searching the internet. Anyone requesting to remove any URL, search results, or play options can contact us at info@ss-youtube.cc
         </Text>
 
-        {/* SECTION 1 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            1. General Terms
-          </Heading>
-          <Text mb="15px">
-            You may use the Service only if you can form a binding contract with us, and only in compliance with these Terms and all applicable laws.
-          </Text>
-          <Text mb="15px">
-            You must be at least eighteen (18) years of age to use the Service...
-          </Text>
-        </Box>
+        <Text mb={3} color="black">
+          You need to follow the following procedure if you want to remove your work:
+        </Text>
 
-        {/* SECTION 2 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            2. Intellectual Property
-          </Heading>
-          <Text mb="15px">
-            All rights, title, and interest in and to the Service are owned by us and/or licensed to us...
-          </Text>
-        </Box>
+        <Text mb={3} color="black">
+          Claims should be submitted to us via the contact form on our website. The claim must be in English and should be understandable, polite, and reasonable. Claims from free service emails like AOL, Yahoo, Gmail, etc. will be rejected.
+        </Text>
 
-        {/* SECTION 3 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            3. Your Representations
-          </Heading>
-          <Text mb="15px">
-            You agree that while using our Service you shall not upload or make available materials that:
-          </Text>
-          <UnorderedList spacing={2} mb="15px">
-            <ListItem>
-              Are copyrighted, protected by trade secret, etc.
-            </ListItem>
-            <ListItem>
-              Are obscene, vulgar, defamatory, or otherwise inappropriate.
-            </ListItem>
-            <ListItem>
-              Depict illegal activities or cruelty.
-            </ListItem>
-            <ListItem>
-              Impersonate any person or misrepresent identity.
-            </ListItem>
-            <ListItem>
-              Promote criminal offenses or violate laws.
-            </ListItem>
-            <ListItem>
-              Are unsolicited promotions or spam.
-            </ListItem>
-          </UnorderedList>
-          <Text mb="15px">
-            You are responsible for any and all content you upload or interact with.
-          </Text>
-        </Box>
+        <Text mb={3} color="black">
+          You should present evidence that shows that you are the copyright holder or that you are acting on behalf of the copyright holder. You should also present evidence that shows the content is legally copyright.
+        </Text>
 
-        {/* SECTION 4 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            4. Third Party Links
-          </Heading>
-          <Text mb="15px">
-            The Service may contain links to third party sites. We don&apos;t assume any responsibility for them.
-          </Text>
-        </Box>
+        <Text mb={3} color="black">
+          You should present materials that need to be removed as material name and links to direct music pages. We will not accept links to search queries, categories or subcategories or media pages.
+        </Text>
 
-        {/* SECTION 5 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            5. Use of the Service
-          </Heading>
-          <Text mb="15px">
-            You acknowledge that the Service is a general-purpose tool and should only be used legally.
-          </Text>
-          <UnorderedList spacing={2} mb="15px">
-            <ListItem>Using the Service for any unlawful purpose</ListItem>
-            <ListItem>Using bots, scrapers, or automated tools</ListItem>
-            <ListItem>Uploading malicious code or software</ListItem>
-          </UnorderedList>
-        </Box>
+        <Text mb={3} color="black">
+          You should enter their contact information, such as a valid email address and phone number.
+        </Text>
 
-        {/* SECTION 6 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            6. Copyright Claims
-          </Heading>
-          <Text mb="15px">
-            If you believe content infringes your copyright, email us with the required DMCA information.
-          </Text>
-        </Box>
+        <Text mb={3} color="black">
+          After the removal requests are processed, the work will be removed from our website. Still, the name of your product will still remain indexed and any media page or further hosted music on other websites will still be available even if the file has our name on it or its description.
+        </Text>
 
-        {/* SECTION 7 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            7. Limitation of Liability and No Warranty
-          </Heading>
-          <Text mb="15px">
-            The Service is provided &quot;as is&quot;. We are not liable for any damages or losses.
-          </Text>
-        </Box>
+        <Heading as="h2" fontSize="20px" fontWeight="bold" mb={3} color="black">
+          Good Copyright Claim Example:
+        </Heading>
 
-        {/* SECTION 8 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            8. Indemnity
-          </Heading>
-          <Text mb="15px">
-            You agree to indemnify and hold harmless the Service from any claims or liabilities.
-          </Text>
-        </Box>
+        <Text mb={3} color="black">
+          We comply with the Online Copyright Infringement Liability Limitation Act (OCILLA), which is part of the Digital Millennium Copyright Act of 1998. In accordance with the requirements and terms of the DMCA, we request service providers to be held liable for their acts concerning copyright infringement. We request service providers to immediately stop allowing access to copyrighted material.
+        </Text>
 
-        {/* SECTION 9 */}
-        <Box>
-          <Heading as="h2" fontSize="32px" fontWeight="500" marginBottom={".5rem"}>
-            9. Miscellaneous
-          </Heading>
-          <Text mb="15px">
-            If any part of these Terms is deemed invalid, the remaining parts remain in effect.
+        <Text mb={3} color="black">
+          We have found infringing material on your website which indeed is our music 'The Music' released on December 12th, 2011.
+        </Text>
+
+        <Text mb={3} color="black">
+          The infringing material should be removed or disabled immediately because it is copyrighted and is used without permission. Piracy should be avoided. We believe in good faith & belief that use of the material in the manner complained of here is not authorized by the owner of an exclusive right that is allegedly infringed, or its agent, or by the law. The person claiming copyright infringement is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.
+        </Text>
+
+        <Text mb={3} color="black">
+          We hereby declare that the information in the notification is accurate to the best of our knowledge & belief.
+        </Text>
+
+        <Text mb={3} color="black">
+          Authorization letter of the copyright owner (or person/company representing): [Link to the letter]<br />
+          A document proving that the materials are copyrighted and belong to owner (or person/company representing): [Link to the document]
+        </Text>
+
+        <Text mb={3} color="black">
+          Digital signature for copyright claim:
+        </Text>
+
+        <Text mb={3} color="black">
+          Full information included and email addresses, phone numbers, and website details.{' '}
+          <Text as="a" href="mailto:info@ss-youtube.cc" color="blue.600" textDecoration="underline">
+            info@ss-youtube.cc
           </Text>
-        </Box>
+        </Text>
       </VStack>
     </Box>
   );
