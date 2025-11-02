@@ -34,8 +34,8 @@ export default function Header() {
 
   const navItems = [
     { label: "Youtube Downloader", type: "route", to: "/youtube-downloader" },
-    { label: "Convert YouTube to MP3", type: "route", to: "/youtube-to-mp3-converter" },
-    { label: "Youtube to MP4 Converter", type: "route", to: "/youtube-to-mp4-converter" },
+    // { label: "Convert YouTube to MP3", type: "route", to: "/youtube-to-mp3-converter" },
+    // { label: "Youtube to MP4 Converter", type: "route", to: "/youtube-to-mp4-converter" },
     { label: "Instagram Downloader", type: "route", to: "/instagram" },
     { label: "Facebook Downloader", type: "route", to: "/facebook" },
   ];
@@ -160,22 +160,7 @@ export default function Header() {
                 )
               )}
               <ScrollLink to="contact" smooth={true} duration={500} onClick={onClose}>
-                <Button
-                  sx={{
-                    background: "linear-gradient(140deg, #FF6E00, #A629F2)",
-                    color: "white",
-                    padding: "15px 30px",
-                    borderRadius: "150px",
-                    height: "52px",
-                    boxShadow: "0px 8px 18px -3px rgba(153, 1, 255, 0.32)",
-                    transition: "background 0.3s ease",
-                    _hover: {
-                      background: "linear-gradient(260deg, #FF4094, #A629F2)",
-                    },
-                  }}
-                >
-                  Let&apos;s Talk
-                </Button>
+               
               </ScrollLink>
             </Stack>
           </DrawerBody>

@@ -36,9 +36,10 @@ export default function Home() {
       <Script
         async
         data-cfasync="false"
-        src="https://alwingulla.com/88/tag.min.js"
-        data-zone="107310"
+        src="https://fpyf8.com/88/tag.min.js"
+        data-zone="181028"
       />
+
       <Box bg={"#08003A"}>
         <Container maxW="1100px" p={"157px 0px 50px"}>
           {/* <Heading as="h1" size="xl" color="white" textAlign="center" mb={8} display={{ base: 'none', md: 'block' }}>
