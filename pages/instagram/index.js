@@ -20,6 +20,7 @@ import {
   InputGroup,
   InputRightElement,
   useBreakpointValue,
+  OrderedList,
 } from "@chakra-ui/react";
 import { FaHeart, FaCalendarAlt } from "react-icons/fa";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -38,10 +39,10 @@ const InstagramDownloader = () => {
     if (!dateString) return null;
     try {
       const date = new Date(dateString);
-      return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+      return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
       });
     } catch (error) {
       return dateString;
@@ -85,13 +86,13 @@ const InstagramDownloader = () => {
       });
 
       const data = await response.json();
-      
+
       // Debug: Log the received data
-      console.log('Instagram API Response:', data);
-      
+      console.log("Instagram API Response:", data);
+
       if (data.success) {
         setVideoData(data.data);
-        console.log('Video data set:', data.data);
+        console.log("Video data set:", data.data);
         toast({
           title: "Success!",
           description: "Video found and ready for download.",
@@ -117,12 +118,10 @@ const InstagramDownloader = () => {
   ];
 
   const features = [
-    "Experience the best Instagram video downloading with our top-rated tool – completely free.",
-    "Download content in your preferred quality: from videos to photos, standard to Full HD resolution.",
-    "Perfect compatibility across all devices – grab your favorite content on desktop or mobile.",
-    "Convert Instagram videos with just a few simple clicks using our streamlined platform.",
-    "Get lightning-fast downloads and unlimited content access without spending a dime.",
-    "Master Instagram downloading with our comprehensive guide and expert tips.",
+    "Copy the URL of any video, reel, or photo you want to download video instagram 2021 from Instagram.",
+    "Paste the copied URL in the input area of the Instagram Video Downloader website.",
+    "Click the Download button to start the process of downloading.A list of results offering several quality options will appear immediately on your screen. Choose the option you want and download it.",
+    "A list of results offering several quality options will appear immediately on your screen. Choose the option you want and download it.",
   ];
 
   return (
@@ -195,7 +194,10 @@ const InstagramDownloader = () => {
                         inputMode="url"
                         autoCapitalize="none"
                       />
-                      <InputRightElement width={{ base: "3rem", md: "8.5rem" }} h="100%">
+                      <InputRightElement
+                        width={{ base: "3rem", md: "8.5rem" }}
+                        h="100%"
+                      >
                         <Button
                           type="submit"
                           aria-label={isMobile ? "Download video" : undefined}
@@ -238,30 +240,39 @@ const InstagramDownloader = () => {
                   <Heading as="h3" size="md" color="white" mb="15px">
                     🎉 Download is Ready!
                   </Heading>
-                  
+
                   {/* Video Metadata Section */}
-                  <Box mb="20px" p="15px" bg="rgba(255,255,255,0.1)" borderRadius="8px">
+                  <Box
+                    mb="20px"
+                    p="15px"
+                    bg="rgba(255,255,255,0.1)"
+                    borderRadius="8px"
+                  >
                     <VStack spacing={3} align="start">
                       <Heading as="h4" size="sm" color="white">
                         {videoData.title}
                       </Heading>
-                      
+
                       {videoData.description && (
                         <Text fontSize="sm" color="#666" fontStyle="italic">
                           &quot;{videoData.description}&quot;
                         </Text>
                       )}
-                      
+
                       <HStack spacing={4} flexWrap="wrap">
                         {videoData.upload_date && (
                           <HStack spacing={1}>
-                            <Icon as={FaCalendarAlt} color="#d32f2f" boxSize="12px" />
+                            <Icon
+                              as={FaCalendarAlt}
+                              color="#d32f2f"
+                              boxSize="12px"
+                            />
                             <Text fontSize="sm" color="#666">
                               {formatDate(videoData.upload_date)}
                             </Text>
                           </HStack>
                         )}
-                        
+
                         {videoData.likes && (
                           <HStack spacing={1}>
                             <Icon as={FaHeart} color="#d32f2f" boxSize="12px" />
@@ -273,14 +284,19 @@ const InstagramDownloader = () => {
                       </HStack>
                     </VStack>
                   </Box>
-                  
+
                   <Text color="#555" mb="15px">
                     Click the button below to download your Instagram Reel.
                   </Text>
-                  
+
                   {/* Video Preview Section */}
                   <Box mb="20px">
-                    <Text color="#555" mb="10px" fontSize="14px" fontWeight="bold">
+                    <Text
+                      color="#555"
+                      mb="10px"
+                      fontSize="14px"
+                      fontWeight="bold"
+                    >
                       Video Preview:
                     </Text>
                     <Box
@@ -296,9 +312,9 @@ const InstagramDownloader = () => {
                           controls
                           poster={videoData.thumbnail_url}
                           style={{
-                            width: '100%',
-                            height: 'auto',
-                            borderRadius: '8px',
+                            width: "100%",
+                            height: "auto",
+                            borderRadius: "8px",
                           }}
                           preload="metadata"
                         />
@@ -320,7 +336,7 @@ const InstagramDownloader = () => {
                       </Box>
                     </Box>
                   </Box>
-                  
+
                   <Button
                     as="a"
                     href={videoData.download_url}
@@ -363,39 +379,28 @@ const InstagramDownloader = () => {
 
       {/* Description Section */}
       <Container maxW="1240px" py={"50px"}>
-        <Heading
-          as="h1"
-          size="xl"
-          mb={8}
-          display={{ base: "none", md: "block" }}
-          textAlign={"center"}
-        >
-          Best Quality Instagram Video or Photo Downloader
-        </Heading>
         <Text fontSize="lg" color="gray.600" mb={6}>
-          <strong>SSSInstagram</strong> is a popular and one of the most
-          used social media applications. This platform is used for several
-          purposes, including posting and sharing videos, photos, stories,
-          highlights, and reels etc. People from all over the world connect.
-          It is also one of the most famous social media applications for
-          gaining news from all corners of the world. Instagram, despite
-          having so many useful features and functions, lacks one of the
-          most important features, and that is downloading any video, photo,
-          or reel directly to users&apos; devices.{" "}
-          <strong>Instagram Video Downloader</strong> is a safe and secure
-          software to help its users download any video from Instagram they
-          wish. It works without the assistance of any other software or
-          application. Downloading any reel or video through the Instagram
-          Video Downloader is a very easy process.
+          SSSInstagram is a popular and one of the most used social media
+          applications. This platform is used for several purposes, including
+          posting and sharing videos, photos, stories, highlights, and reels
+          etc. People from all over the world connect. It is also one of the
+          most famous social media applications for gaining news from all
+          corners of the world. Instagram, despite having so many useful
+          features and functions, lacks one of the most important features, and
+          that is downloading any video, photo, or reel directly to users'
+          devices. instagram video downloader mod apk is a software created to
+          solve this important issue.
+        </Text>
+        <Text fontSize="lg" color="gray.600" mb={6}>
+          Instagram Video Downloader is a safe and secure software to help its
+          users download any video from Instagram they wish. It works without
+          the assistance of any other software or application. Downloading any
+          reel or video through the Instagram Video Downloader is a very easy
+          process.
         </Text>
 
-        <Text
-          fontSize="2xl"
-          fontWeight="bold"
-          mb={6}
-          textAlign={"center"}
-        >
-          Our Converter Supported Platforms
+        <Text fontSize="2xl" fontWeight="bold" mb={6} textAlign={"center"}>
+          Fully Compatible With
         </Text>
         <Flex justify="center" gap={12} mb={10} flexWrap="wrap">
           {supportedPlatforms.map((platform) => (
@@ -412,11 +417,10 @@ const InstagramDownloader = () => {
       {/* Instructions Section */}
       <Box bg="#08003A" color="white" py={"50px"} px={6}>
         <DownloadFromOtherWebsites
-          title="Instruction: Downloading Instagram Videos or Photos in best quality"
+          title="Steps Used to Download from Instagram videos"
           paragraphs={[
-            "How to download Instagram videos, reels, photos, and stories using SSSInstagram? OR Feature:",
+            "Downloading videos from Instagram is easy and does not take a lot of involved steps.",
           ]}
-          exampleLinkText="instagram.com/p/xxxxxxxxx/"
         />
         <Container maxW="1100px" p={0}>
           <VStack
@@ -432,91 +436,111 @@ const InstagramDownloader = () => {
                 <ListItem key={index}>{feature}</ListItem>
               ))}
             </UnorderedList>
+            <Text mt={"15px"} color={"white"}>
+              Instagram Video Downloader is a tool that offers many functions
+              that attract its users. It has a user-friendly border and works on
+              all screens and browsers. This tool includes useful functionality
+              and is simple to use.
+            </Text>
           </VStack>
         </Container>
-      </Box>
-
-      {/* Step-by-Step Guide */}
-      <Box py={10} maxW="1240px" mx="auto">
-        <Text fontSize="32px" fontWeight="500" textAlign="center" mb={8}>
-          Leverage Instagram Downloader for Efficient Downloads
-        </Text>
-        <Flex justify="center" gap={10} flexWrap="wrap" mb={8}>
-          <VStack spacing={4}>
-            <Text color="black" fontSize="20px" fontWeight={"500"} maxW="360px">
-              Finding Your Ideal Instagram Video or Photo
-            </Text>
-            <Image src="/how_can_i_save_1.png" alt="Step 1" />
-            <Text textAlign="center" maxW="360px" fontSize={"17px"}>
-              Start by exploring to the Instagram post, reel, or photo you want to
-              download to ensure a smooth and simple download process.
-            </Text>
-          </VStack>
-          <VStack spacing={4}>
-            <Text color="black" fontSize="20px" fontWeight={"500"} maxW="360px">
-              Pasting the URL into Search Box
-            </Text>
-            <Image src="/insert_video_link.png" alt="Step 2" />
-            <Text textAlign="center" maxW="360px" fontSize={"17px"}>
-              You can download content to your PC by essentially pasting the
-              link or copying the URL from the post you need to download.
-            </Text>
-          </VStack>
-          <VStack spacing={4}>
-            <Text color="black" fontSize="20px" fontWeight={"500"} maxW="360px">
-              Download Your Instagram Content Step by Step
-            </Text>
-            <Image src="/how_can_i_save_3.png" alt="Step 3" />
-            <Text textAlign="center" maxW="360px" fontSize={"17px"}>
-              We provide fast convert and download Instagram content in high
-              quality. Simply paste a link, pick the format and your content is ready to download.
-            </Text>
-          </VStack>
-        </Flex>
       </Box>
 
       {/* Additional Features Section */}
       <Container maxW="1240px" py="50px">
         <VStack spacing={8}>
           <Heading as="h2" size="lg" textAlign="center">
-            IGram Downloader – Videos, Photos iGTV Story Saver & Reels
+            Features of SSSInstagram Video Downloader
           </Heading>
           <Text fontSize="lg" color="gray.600" textAlign="left">
+            Instagram Video Downloader is one of the most reliable and unique
+            software that allows its users to download any content from
+            Instagram directly to their devices, whether Android, iOS,
+            Computers, or Tablets for free and quickly. Instagram, in spite of
+            having many different and important features, lacks this key feature
+            of downloading any Video, Photo, Reel, Carousel, IGTV, Profile
+            Picture, Story, or Highlights, etc to the user's device. But the
+            download video instagram private came to the rescue. This tool
+            downloads videos and other content from Instagram in a few simple
+            ways, and it is very safe and secure because it does not require any
+            personal data. Instagram Video Downloader is one of the most useful
+            creations in the tech world.
+          </Text>
+          <Text fontSize="lg" color="gray.600" textAlign="left">
+            The following are some of the most important features of the
+            Instagram Video Downloader that make this software the most favorite
+            to use.
+          </Text>
+          <OrderedList mt={"20px"}>
+            <ListItem mt={"10px"}>
+              Instagram Video Downloader is a software that allows its users to
+              download any video, photo, album, IGTV, instagram video download
+              story, reel, or profile picture quickly without consuming time. It
+              offers high-quality downloads of any kind of content from igram
+              apk download for example, 2k, 4k, and 1080p. Any video you wish to
+              download is downloaded in its original quality.
+            </ListItem>
+            <ListItem mt={"10px"}>
+              It works on all devices, whether Android, iOS, Tablet, or PC. It
+              does not restrict its users from using the Instagram Video
+              Downloader just for the sake of the device. It has an easy-to-use
+              connection.
+            </ListItem>
+            <ListItem mt={"10px"}>
+              It is much protected to use because you do not need to share any
+              personal data or information. You also do not need to share login
+              details to operate this software. The download history of its
+              users is also not saved by Instagram Video Downloader. It works
+              freely, and you do not need to buy any premium version or any
+              monthly or annual package. It does not require any registration
+              either.
+            </ListItem>
+            <ListItem mt={"10px"}>
+              Instagram Video Downloader does not need any other third-party
+              software or application to operate its functionality. By not
+              taking any assistance from other software or applications, we left
+              no room to share any data or details of our users with any other
+              software or application, and it also helps in maintaining storage
+              space.
+            </ListItem>
+          </OrderedList>
+          <Heading as="h2" size="lg" textAlign="center">
+            IGram Downloader – Videos, Photos iGTV Story Saver & Reels
+          </Heading>
+          <Text fontSize="lg" color="gray.600">
             You can seamlessly download different forms of content from
             Instagram for free and fast with the original quality, such as
-            Videos, Photos, Reels, IGTV, Carousel/ Album, Story, Highlights,
-            and Profile Picture. You can download any kind of video from
-            Instagram in high resolution easily by using the instagram video
-            download online. Both types of videos, singular and multiple, can
-            be downloaded without any watermark. Reels have become a popular
-            video format today because it is short videos explaining big
-            topics without consuming much time. By using our Instagram
-            Downloader tool, you can save your favorite{" "}
-            <strong>instagram video download reel</strong> on your device for
-            free and enjoy it whenever you want.
+            Videos, Photos, Reels, IGTV, Carousel/ Album, Story, Highlights, and
+            Profile Picture.You can download any kind of video from Instagram in
+            high resolution easily by using the instagram video download online.
+            Both types of videos, singular and multiple, can be downloaded
+            without any watermark.Reels have become a popular video format today
+            because it is short videos explaining big topics without consuming
+            much time. By using our Instagram Downloader tool, you can save your
+            favorite instagram video download reel on your device for free and
+            enjoy it whenever you want.
           </Text>
           <Text fontSize="lg" color="gray.600">
             Downloading any photo directly to your device is not a big or
-            difficult task using the Instagram Downloader tool. You can
-            download a simple image of your choice, and similarly, you can
-            download multiple images from carousels without compromising on
-            their quality. <strong>IGTV Downloader</strong> Everyone can&apos;t
-            watch a long video in one sitting; they need software that can
-            help them download their favorite video to watch later. IGTV is a
-            type of long video that cannot be seen in a single sitting for
-            everyone, so our Instagram Downloader helps in this case to
-            download your favorite video and watch it later offline
+            difficult task using the Instagram Downloader tool. You can download
+            a simple image of your choice, and similarly, you can download
+            multiple images from carousels without compromising on their
+            quality. IGTV Downloader Everyone can't watch a long video in one
+            sitting; they need software that can help them download their
+            favorite video to watch later. IGTV is a type of long video that
+            cannot be seen in a single sitting for everyone, so our Instagram
+            Downloader helps in this case to download your favorite video and
+            watch it later offline
           </Text>
           <Text fontSize="lg" color="gray.600">
-            Instagram provides its users with a feature of sharing mixed
-            content consisting of multiple instagram profile picture download
-            and videos, which is known as carousel posts, also known as
-            gallery posts or album posts. In order to free and secure
-            downloading of carousel posts, our Instagram Downloader tool is
-            the best option.You can easily download any Instagram story and
-            save it to your device. Instagram Story normally expires after
-            24/7 hours, but you can safely download it and view it every time
-            you want.
+            Instagram provides its users with a feature of sharing mixed content
+            consisting of multiple instagram profile picture download and
+            videos, which is known as carousel posts, also known as gallery
+            posts or album posts. In order to free and secure downloading of
+            carousel posts, our Instagram Downloader tool is the best option.You
+            can easily download any Instagram story and save it to your device.
+            Instagram Story normally expires after 24/7 hours, but you can
+            safely download it and view it every time you want.
           </Text>
           <Text fontSize="lg" color="gray.600">
             Highlights Downloader By using the Instagram Downloader software,

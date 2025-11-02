@@ -16,13 +16,13 @@ const DownloadFromOtherWebsites = ({
 
       {paragraphs.length > 0 &&
         paragraphs.map((para, index) => (
-          <Text mb={4} key={index} w={'59%'} mx={'auto'}>
+          <Text mb={4} key={index} mx={'auto'} w={'59%'}>
             {para}
           </Text>
         ))}
 
       {exampleLinkText && exampleLinkUrl && (
-        <Text mt={2}>
+        <Text mt={2} textAlign="center">
           For example:{" "}
           <Link href={exampleLinkUrl} color="cyan.300" isExternal>
             {exampleLinkText}

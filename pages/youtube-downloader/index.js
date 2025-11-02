@@ -139,7 +139,7 @@ const Home = () => {
         {/* Step-by-step images */}
         <Flex justify="center" gap={10} flexWrap="wrap" mb={8}>
           <VStack spacing={4}>
-            <Text color="black" fontSize="20px" fontWeight={"500"} maxW="360px">
+            <Text color="black" fontSize="17px" fontWeight={"500"} maxW="360px">
               Search Your Favorite YouTube MP3 and MP4.
             </Text>
             <Image src="/how_can_i_save_1.png" alt="Step 1" />
@@ -150,7 +150,7 @@ const Home = () => {
             </Text>
           </VStack>
           <VStack spacing={4}>
-            <Text color="black" fontSize="20px" fontWeight={"500"} maxW="360px">
+            <Text color="black" fontSize="17px" fontWeight={"500"} maxW="360px">
               Combine the video URL into the search box.
             </Text>
             <Image src="/insert_video_link.png" alt="Step 2" />
@@ -161,7 +161,7 @@ const Home = () => {
             </Text>
           </VStack>
           <VStack spacing={4}>
-            <Text color="black" fontSize="20px" fontWeight={"500"} maxW="360px">
+            <Text color="black" fontSize="17px" fontWeight={"500"} maxW="360px">
               Step by step download your YouTube.
             </Text>
             <Image src="/how_can_i_save_3.png" alt="Step 3" />
