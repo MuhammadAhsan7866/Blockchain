@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      {/* <Head>
+      <Head>
         <meta
           name="description"
           content="Ssyoutube Online Videos Downloader is a fast and secure solution that offers high quality (1080p, 2k, 4k) Ss youtube mp3 and mp4 converter сс ютуб savefrom ytmp3."
@@ -32,7 +32,7 @@ export default function Document() {
           name="twitter:description"
           content="Ssyoutube Online Videos Downloader is a fast and secure solution that offers high quality (1080p, 2k, 4k) Ss youtube mp3 and mp4 converter сс ютуб savefrom ytmp3."
         />
-      </Head> */}
+      </Head>
       <body>
         <Main />
         <NextScript />

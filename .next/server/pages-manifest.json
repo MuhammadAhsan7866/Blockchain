@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/youtube-downloader": "pages/youtube-downloader.js",
-  "/facebook": "pages/facebook.js",
-  "/instagram": "pages/instagram.js"
+  "/instagram": "pages/instagram.js",
+  "/facebook": "pages/facebook.js"
 }

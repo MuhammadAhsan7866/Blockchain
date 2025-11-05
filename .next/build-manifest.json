@@ -32,11 +32,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/facebook.js"
     ],
-    "/instagram": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/instagram.js"
-    ],
     "/youtube-downloader": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
