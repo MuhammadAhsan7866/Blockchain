@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import {
   Box,
@@ -44,6 +45,26 @@ Sssyoutube transforms song in the best production key and convert mp3 format als
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>
+          YouTube to MP3 Converter - Convert YouTube to MP3 Free | SSYouTube
+        </title>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://ss-youtube.cc/youtube-to-mp3-converter/"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          name="description"
+          content="Convert YouTube videos to MP3 format for free with SSYouTube. High-quality audio downloads (128kbps, 192kbps, 256kbps) - no registration required."
+        />
+        <meta
+          property="og:title"
+          content="YouTube to MP3 Converter - Convert YouTube to MP3 Free | SSYouTube"
+        />
+      </Head>
       <Box bg={"#08003A"}>
         <Container maxW="1100px" p={"157px 0px 0px"}>
           <YoutubeMP3 />

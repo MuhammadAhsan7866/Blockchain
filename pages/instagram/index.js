@@ -145,10 +145,6 @@ const InstagramDownloader = () => {
           property="og:title"
           content="SSInstagram Download Videos, Photos, Reels, StorySaver & IGTV"
         />
-        <meta
-          property="og:description"
-          content="SSInstagram - Instagram Downloader is Story, Videos, Reels, profile pictures, and iGTV in original HD high-quality Download One click Fast and free."
-        />
       </Head>
 
       {/* Banner with Download Input */}

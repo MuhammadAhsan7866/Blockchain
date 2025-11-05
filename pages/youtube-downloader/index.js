@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import YoutubeDownloader from "../../src/components/app/LandingPage/YoutubeDownloader";
 import {
@@ -44,6 +45,26 @@ const sections = [
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>
+          YouTube Downloader - Download YouTube Videos & MP3 | SSYouTube
+        </title>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://ss-youtube.cc/youtube-downloader/"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          name="description"
+          content="Download YouTube videos and MP3 files in high quality (1080p, 2k, 4k) with SSYouTube free online YouTube downloader. Fast, secure, and no registration required."
+        />
+        <meta
+          property="og:title"
+          content="YouTube Downloader - Download YouTube Videos & MP3 | SSYouTube"
+        />
+      </Head>
       <Box bg={"#08003A"}>
         <Container maxW="1100px" p={"157px 0px 0px"}>
           <YoutubeDownloader />

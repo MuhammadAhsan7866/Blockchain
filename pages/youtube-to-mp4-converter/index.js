@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import {
   Box,
@@ -55,6 +56,26 @@ Our online SS video downloader is compatible with a wide range of web browsers, 
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>
+          YouTube to MP4 Converter - Download YouTube Videos in MP4 | SSYouTube
+        </title>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://ss-youtube.cc/youtube-to-mp4-converter/"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          name="description"
+          content="Convert YouTube videos to MP4 format in high quality (HD, 1080p, 2k, 4k) with SSYouTube free online converter. Fast downloads, no registration required."
+        />
+        <meta
+          property="og:title"
+          content="YouTube to MP4 Converter - Download YouTube Videos in MP4 | SSYouTube"
+        />
+      </Head>
       <Box bg={"#08003A"}>
         <Container maxW="1100px" p={"157px 0px 0px"}>
           <YoutubeMP4 />

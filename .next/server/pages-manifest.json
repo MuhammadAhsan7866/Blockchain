@@ -2,7 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/youtube-to-mp3-converter": "pages/youtube-to-mp3-converter.js",
-  "/facebook": "pages/facebook.js",
-  "/instagram": "pages/instagram.js"
+  "/": "pages/index.js",
+  "/instagram": "pages/instagram.js",
+  "/youtube-downloader": "pages/youtube-downloader.js",
+  "/facebook": "pages/facebook.js"
 }

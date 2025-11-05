@@ -146,10 +146,6 @@ const FacebookDownloader = () => {
           property="og:title"
           content="Facebook Video Downloader - SnapSave Download Videos Full HD, 1080p, 2k, 4k"
         />
-        <meta
-          property="og:description"
-          content="SaveFrom your favorite Facebook videos Downloader through with FB videos in HD result 2K, 4K (mp4)."
-        />
       </Head>
 
       {/* Banner with Download Input */}
