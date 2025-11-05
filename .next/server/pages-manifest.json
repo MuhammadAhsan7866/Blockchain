@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/instagram": "pages/instagram.js",
   "/youtube-downloader": "pages/youtube-downloader.js",
-  "/facebook": "pages/facebook.js"
+  "/facebook": "pages/facebook.js",
+  "/instagram": "pages/instagram.js"
 }
