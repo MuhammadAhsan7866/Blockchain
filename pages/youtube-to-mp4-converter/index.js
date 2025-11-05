@@ -72,8 +72,26 @@ const Home = () => {
           content="Convert YouTube videos to MP4 format in high quality (HD, 1080p, 2k, 4k) with SSYouTube free online converter. Fast downloads, no registration required."
         />
         <meta
+          name="keywords"
+          content="youtube to mp4, youtube mp4 converter, convert youtube to mp4, youtube video converter, youtube downloader mp4, free youtube mp4 converter"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="YouTube to MP4 Converter - Download YouTube Videos in MP4 | SSYouTube"
+        />
+        <meta
+          property="og:description"
+          content="Convert YouTube videos to MP4 format in high quality (HD, 1080p, 2k, 4k) with SSYouTube free online converter. Fast downloads, no registration required."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="YouTube to MP4 Converter - Download YouTube Videos in MP4 | SSYouTube"
+        />
+        <meta
+          name="twitter:description"
+          content="Convert YouTube videos to MP4 format in high quality (HD, 1080p, 2k, 4k) with SSYouTube free online converter. Fast downloads, no registration required."
         />
       </Head>
       <Box bg={"#08003A"}>

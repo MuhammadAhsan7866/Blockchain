@@ -142,8 +142,26 @@ const InstagramDownloader = () => {
           content="SSInstagram - Instagram Downloader is Story, Videos, Reels, Profile Pictures, and iGTV in original HD High-Quality Download One click Fast and Free."
         />
         <meta
+          name="keywords"
+          content="instagram downloader, instagram video downloader, download instagram videos, instagram reel downloader, instagram story downloader, download instagram photos, igtv downloader"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="SSInstagram Download Videos, Photos, Reels, StorySaver & IGTV"
+        />
+        <meta
+          property="og:description"
+          content="SSInstagram - Instagram Downloader is Story, Videos, Reels, Profile Pictures, and iGTV in original HD High-Quality Download One click Fast and Free."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="SSInstagram Download Videos, Photos, Reels, StorySaver & IGTV"
+        />
+        <meta
+          name="twitter:description"
+          content="SSInstagram - Instagram Downloader is Story, Videos, Reels, Profile Pictures, and iGTV in original HD High-Quality Download One click Fast and Free."
         />
       </Head>
 

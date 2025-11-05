@@ -143,8 +143,26 @@ const FacebookDownloader = () => {
           content="SaveFrom your favorite Facebook videos Downloader through with FB videos in HD result 2K, 4K (mp4)."
         />
         <meta
+          name="keywords"
+          content="facebook video downloader, facebook downloader, download facebook videos, fb video downloader, facebook video saver, download facebook reels, facebook watch downloader"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="Facebook Video Downloader - SnapSave Download Videos Full HD, 1080p, 2k, 4k"
+        />
+        <meta
+          property="og:description"
+          content="SaveFrom your favorite Facebook videos Downloader through with FB videos in HD result 2K, 4K (mp4)."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Facebook Video Downloader - SnapSave Download Videos Full HD, 1080p, 2k, 4k"
+        />
+        <meta
+          name="twitter:description"
+          content="SaveFrom your favorite Facebook videos Downloader through with FB videos in HD result 2K, 4K (mp4)."
         />
       </Head>
 

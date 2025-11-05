@@ -61,8 +61,26 @@ const Home = () => {
           content="Download YouTube videos and MP3 files in high quality (1080p, 2k, 4k) with SSYouTube free online YouTube downloader. Fast, secure, and no registration required."
         />
         <meta
+          name="keywords"
+          content="youtube downloader, youtube video downloader, download youtube videos, youtube mp3 downloader, youtube mp4 downloader, free youtube downloader"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="YouTube Downloader - Download YouTube Videos & MP3 | SSYouTube"
+        />
+        <meta
+          property="og:description"
+          content="Download YouTube videos and MP3 files in high quality (1080p, 2k, 4k) with SSYouTube free online YouTube downloader. Fast, secure, and no registration required."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="YouTube Downloader - Download YouTube Videos & MP3 | SSYouTube"
+        />
+        <meta
+          name="twitter:description"
+          content="Download YouTube videos and MP3 files in high quality (1080p, 2k, 4k) with SSYouTube free online YouTube downloader. Fast, secure, and no registration required."
         />
       </Head>
       <Box bg={"#08003A"}>

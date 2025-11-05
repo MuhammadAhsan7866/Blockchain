@@ -61,8 +61,26 @@ const Home = () => {
           content="Convert YouTube videos to MP3 format for free with SSYouTube. High-quality audio downloads (128kbps, 192kbps, 256kbps) - no registration required."
         />
         <meta
+          name="keywords"
+          content="youtube to mp3, youtube mp3 converter, convert youtube to mp3, youtube audio downloader, youtube mp3 downloader, free youtube mp3 converter, ytmp3"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="YouTube to MP3 Converter - Convert YouTube to MP3 Free | SSYouTube"
+        />
+        <meta
+          property="og:description"
+          content="Convert YouTube videos to MP3 format for free with SSYouTube. High-quality audio downloads (128kbps, 192kbps, 256kbps) - no registration required."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="YouTube to MP3 Converter - Convert YouTube to MP3 Free | SSYouTube"
+        />
+        <meta
+          name="twitter:description"
+          content="Convert YouTube videos to MP3 format for free with SSYouTube. High-quality audio downloads (128kbps, 192kbps, 256kbps) - no registration required."
         />
       </Head>
       <Box bg={"#08003A"}>

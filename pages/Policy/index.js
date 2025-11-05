@@ -19,8 +19,26 @@ export default function TermsPage() {
           content="Privacy Policy for SSYouTube - Learn how we collect, use, and protect your data when using our video downloader service."
         />
         <meta
+          name="keywords"
+          content="ssyoutube privacy policy, youtube downloader privacy, video downloader data protection"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="Privacy Policy | SSYouTube"
+        />
+        <meta
+          property="og:description"
+          content="Privacy Policy for SSYouTube - Learn how we collect, use, and protect your data when using our video downloader service."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy | SSYouTube"
+        />
+        <meta
+          name="twitter:description"
+          content="Privacy Policy for SSYouTube - Learn how we collect, use, and protect your data when using our video downloader service."
         />
       </Head>
       <PrivacyPolicy />

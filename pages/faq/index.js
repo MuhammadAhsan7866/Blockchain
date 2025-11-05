@@ -19,8 +19,26 @@ export default function TermsPage() {
           content="Frequently asked questions about SSYouTube video downloader. Learn how to use our free YouTube downloader, MP3 converter, and more."
         />
         <meta
+          name="keywords"
+          content="ssyoutube faq, youtube downloader faq, video downloader help, youtube converter questions, ssyoutube help"
+        />
+        <meta name="author" content="SSYouTube" />
+        <meta
           property="og:title"
           content="FAQ - Frequently Asked Questions | SSYouTube"
+        />
+        <meta
+          property="og:description"
+          content="Frequently asked questions about SSYouTube video downloader. Learn how to use our free YouTube downloader, MP3 converter, and more."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="FAQ - Frequently Asked Questions | SSYouTube"
+        />
+        <meta
+          name="twitter:description"
+          content="Frequently asked questions about SSYouTube video downloader. Learn how to use our free YouTube downloader, MP3 converter, and more."
         />
       </Head>
       <FAQAccordion />
