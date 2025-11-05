@@ -47,7 +47,7 @@ const Home = () => {
     <>
       <Head>
         <title>
-          YouTube to MP3 Converter - Convert YouTube to MP3 Free | SSYouTube
+        SsYouTube to Mp3 Converter High-Quality 2025 | 100% Working
         </title>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -58,7 +58,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta
           name="description"
-          content="Convert YouTube videos to MP3 format for free with SSYouTube. High-quality audio downloads (128kbps, 192kbps, 256kbps) - no registration required."
+          content="YouTube to Mp3 by ssYouTube with Fast and Free ytmp3s & MP4 Converter. YouTube videos to high-quality MP3 up to 320kbs"
         />
         <meta
           name="keywords"
@@ -71,7 +71,7 @@ const Home = () => {
         />
         <meta
           property="og:description"
-          content="Convert YouTube videos to MP3 format for free with SSYouTube. High-quality audio downloads (128kbps, 192kbps, 256kbps) - no registration required."
+          content="YouTube to Mp3 by ssYouTube with Fast and Free ytmp3s & MP4 Converter. YouTube videos to high-quality MP3 up to 320kbs"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
